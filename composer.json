@@ -1,0 +1,41 @@
+{
+    "name": "alphametric/laravel-validation-rules",
+    "description": "A package to provide a set of reusable Laravel validation rules.",
+	"keywords": [
+        "alphametric",
+        "php",
+        "laravel",
+        "validation",
+        "rules"
+    ],
+    "type": "library",
+    "license": "MIT",
+	"homepage": "https://github.com/alphametric/laravel-validation-rules",
+    "authors": [
+        {
+            "name": "Alphametric",
+            "email": "noreply@alphametric.co"
+        }
+    ],
+	"autoload": {
+		"psr-4": {
+			"Alphametric\\Validation\\Rules\\": "src"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"Alphametric\\Validation\\Rules\\Tests\\": "tests"
+		}
+	},
+    "require": {
+		"php": "^7.1.3"
+	},
+    "require-dev": {
+        "orchestra/testbench": "^3.8",
+        "phpunit/phpunit": "^8.0"
+    },
+	"scripts": {
+		"test": "vendor/bin/phpunit"
+	},
+    "minimum-stability": "stable"
+}
