@@ -3,12 +3,8 @@
 // Namespace
 namespace Alphametric\Validation\Rules;
 
-// Using directives
-use Alphametric\Validation\Rules\Helper;
-use Illuminate\Contracts\Validation\Rule;
-
 // Strong password rule
-class StrongPassword implements Rule
+class StrongPassword extends Rule
 {
 
     /**

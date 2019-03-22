@@ -3,15 +3,16 @@
 // Namespace
 namespace Alphametric\Validation\Rules;
 
-// Telephone number rule
-class TelephoneNumber extends Rule
+// Using directives
+use DB;
+use Auth;
+
+// Record owner rule
+class RecordOwner extends Rule
 {
 
     /**
      * Determine if the validation rule passes.
-     *
-     * The telephone number must be 7 - 15 characters in length,
-     * and comprised entirely of integers.
      *
      * @param string $attribute.
      * @param mixed $value.
@@ -20,7 +21,10 @@ class TelephoneNumber extends Rule
      **/
     public function passes($attribute, $value)
     {
-        return preg_match("/^[0-9]{7,15}$/", $value);
+		return DB::table($this->parameters[0])
+				 ->where($this->parameters[1], $value)
+				 ->where('user_id', Auth::id())
+				 ->exists();
     }
 
 
@@ -35,8 +39,8 @@ class TelephoneNumber extends Rule
     public function message()
     {
         return Helper::getLocalizedErrorMessage(
-            'telephone_number',
-            'The :attribute must be a valid telephone number (7 - 15 digits in length)'
+            'record_owner',
+            'You do not have permission to interact with this resource'
         );
     }
 
