@@ -26,6 +26,11 @@ class MonetaryFigure extends Rule
     /**
      * Determine if the validation rule passes.
      *
+     * The monetary figure requires three parameters:
+     * 1. The currency symbol required e.g. '$', '£', '€'.
+     * 2. The maximum number of digits before the decimal point.
+     * 3. The maximum number of digits after the decimal point.
+     *
      * @param string $attribute.
      * @param mixed $value.
      * @return bool.
