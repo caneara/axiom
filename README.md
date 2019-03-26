@@ -36,6 +36,7 @@ The following validation rules are currently available:
 | TelephoneNumber | validation.telephone_number | Requires the presence of a valid telephone number - see class for details |
 | RecordOwner | validation.record_owner | Requires the authenticated user's id to match the user_id column on a given database record e.g. owner:posts,id |
 | MonetaryFigure | validation.monetary_figure | Requires the presence of a monetary figure e.g $72.33 - see class for details |
+| DisposableEmail | validation.disposable_email | Requires the presence of an email address which is not disposable |
 
 The package will receive new rules over time, however since these updates will not be breaking changes, they will not receive major version numbers unless Laravel changes in such a way that the package requires a re-write.
 
