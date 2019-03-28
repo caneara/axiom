@@ -30,13 +30,14 @@ If the validation fails, the package will attempt to respond with a localized er
 
 The following validation rules are currently available:
 
-| Rule           | Message Key | Description |
-| -------------  | ----------- | ----------- |
-| StrongPassword | validation.strong_password | Requires the presence of a "strong" password - see class for details |
+| Rule            | Message Key                 | Description |
+| --------------- | --------------------------- | ----------- |
+| StrongPassword  | validation.strong_password  | Requires the presence of a "strong" password - see class for details |
 | TelephoneNumber | validation.telephone_number | Requires the presence of a valid telephone number - see class for details |
-| RecordOwner | validation.record_owner | Requires the authenticated user's id to match the user_id column on a given database record e.g. owner:posts,id |
-| MonetaryFigure | validation.monetary_figure | Requires the presence of a monetary figure e.g $72.33 - see class for details |
+| RecordOwner     | validation.record_owner     | Requires the authenticated user's id to match the user_id column on a given database record e.g. owner:posts,id |
+| MonetaryFigure  | validation.monetary_figure  | Requires the presence of a monetary figure e.g $72.33 - see class for details |
 | DisposableEmail | validation.disposable_email | Requires the presence of an email address which is not disposable |
+| DoesNotExist    | validation.does_not_exist   | Requires that the given value is not present in a given database table / column - see class for details |
 
 The package will receive new rules over time, however since these updates will not be breaking changes, they will not receive major version numbers unless Laravel changes in such a way that the package requires a re-write.
 

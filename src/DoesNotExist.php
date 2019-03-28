@@ -5,10 +5,9 @@ namespace Alphametric\Validation\Rules;
 
 // Using directives
 use DB;
-use Auth;
 
-// Record owner rule
-class RecordOwner extends Rule
+// Does not exist rule
+class DoesNotExist extends Rule
 {
 
     /**
@@ -27,8 +26,7 @@ class RecordOwner extends Rule
     {
 		return DB::table($this->parameters[0])
 				 ->where($this->parameters[1], $value)
-				 ->where('user_id', Auth::id())
-				 ->exists();
+				 ->doesntExist();
     }
 
 
@@ -43,8 +41,8 @@ class RecordOwner extends Rule
     public function message()
     {
         return Helper::getLocalizedErrorMessage(
-            'record_owner',
-            'You do not have permission to interact with this resource'
+            'does_not_exist',
+            'The :attribute already exists'
         );
     }
 
