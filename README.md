@@ -38,7 +38,7 @@ The following validation rules are currently available:
 | MonetaryFigure  | validation.monetary_figure  | Requires the presence of a monetary figure e.g $72.33 - see class for details |
 | DisposableEmail | validation.disposable_email | Requires the presence of an email address which is not disposable |
 | DoesNotExist    | validation.does_not_exist   | Requires that the given value is not present in a given database table / column - see class for details |
-| Decimal         | validation.decimal          | Requires that the given value is a decimal with the given precision / scale - see class for details |
+| Decimal         | validation.decimal          | Requires that the given value is a decimal with an appropriate format - see class for details |
 
 The package will receive new rules over time, however since these updates will not be breaking changes, they will not receive major version numbers unless Laravel changes in such a way that the package requires a re-write.
 

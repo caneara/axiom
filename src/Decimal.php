@@ -54,7 +54,7 @@ class Decimal extends Rule
     {
         return Helper::getLocalizedErrorMessage(
             'decimal',
-            'The :attribute must be a decimal of a set precision / scale e.g. ' . $this->example()
+            'The :attribute must be an appropriately formatted decimal e.g. ' . $this->example()
         );
     }
 
