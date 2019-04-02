@@ -71,7 +71,7 @@ class DoesNotExistTest extends Orchestra
 	public function a_does_not_exist_can_be_validated()
 	{
 		// Generate the fake data
-		$this -> seedDatabase();
+		$this->seedDatabase();
 
 		// Define the validation rule
 		$rule = ['user_id' => [new DoesNotExist('users', 'id')]];

@@ -51,13 +51,13 @@ class EncodedImageTest extends Orchestra
 		$jpeg_rule = ['image' => [new EncodedImage('jpeg')]];
 
 		// Execute the tests
-		$this->assertFalse(validator(['image' => $this -> getFile('image.jpeg')], $png_rule)->passes());
-		$this->assertTrue(validator(['image' => $this -> getFile('image.png')], $png_rule)->passes());
-		$this->assertTrue(validator(['image' => $this -> getFile('image.jpeg')], $jpeg_rule)->passes());
-		$this->assertFalse(validator(['image' => $this -> getFile('image.png')], $jpeg_rule)->passes());
-		$this->assertFalse(validator(['image' => $this -> invalidImage('image.jpeg')], $jpeg_rule)->passes());
-		$this->assertFalse(validator(['image' => $this -> invalidImage('image.png')], $jpeg_rule)->passes());
-		$this->assertFalse(validator(['image' => $this -> invalidImage()], $jpeg_rule)->passes());
+		$this->assertFalse(validator(['image' => $this->getFile('image.jpeg')], $png_rule)->passes());
+		$this->assertTrue(validator(['image' => $this->getFile('image.png')], $png_rule)->passes());
+		$this->assertTrue(validator(['image' => $this->getFile('image.jpeg')], $jpeg_rule)->passes());
+		$this->assertFalse(validator(['image' => $this->getFile('image.png')], $jpeg_rule)->passes());
+		$this->assertFalse(validator(['image' => $this->invalidImage('image.jpeg')], $jpeg_rule)->passes());
+		$this->assertFalse(validator(['image' => $this->invalidImage('image.png')], $jpeg_rule)->passes());
+		$this->assertFalse(validator(['image' => $this->invalidImage()], $jpeg_rule)->passes());
 	}
 
 }

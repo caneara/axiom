@@ -4,6 +4,7 @@
 namespace Alphametric\Validation\Rules;
 
 // Using directives
+use Str;
 use Illuminate\Http\UploadedFile;
 
 // Encoded image rule
@@ -29,7 +30,7 @@ class EncodedImage extends Rule
 	{
 		$this->file = tmpfile();
 
-		fwrite($this->file, base64_decode(str_after($data, 'base64,')));
+		fwrite($this->file, base64_decode(Str::after($data, 'base64,')));
 
 		return new UploadedFile(
 			stream_get_meta_data($this->file)['uri'], 'image',
@@ -52,11 +53,11 @@ class EncodedImage extends Rule
      **/
     public function passes($attribute, $value)
     {
-		if (! starts_with($value, "data:image/{$this->parameters[0]};base64,")) {
+		if (! Str::startsWith($value, "data:image/{$this->parameters[0]};base64,")) {
 			return false;
 		}
 
-		$result = validator(['file' => $this -> createTemporaryFile($value)], ['file' => 'image'])
+		$result = validator(['file' => $this->createTemporaryFile($value)], ['file' => 'image'])
 			   -> passes();
 
 		fclose($this->file);

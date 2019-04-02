@@ -43,7 +43,7 @@ class MonetaryFigureTest extends Orchestra
 		$rule = ['deposit' => [$class = new MonetaryFigure('$', 4, 2)]];
 
 		// Execute the tests
-		$this->assertTrue(validator(['deposit' => $class -> example()], $rule)->passes());
+		$this->assertTrue(validator(['deposit' => $class->example()], $rule)->passes());
 	}
 
 }

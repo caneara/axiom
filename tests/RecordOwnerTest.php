@@ -101,7 +101,7 @@ class RecordOwnerTest extends Orchestra
 	public function a_record_owner_can_be_validated()
 	{
 		// Generate the fake data
-		$this -> seedDatabase();
+		$this->seedDatabase();
 
 		// Define the validation rule
 		$rule = ['post_id' => [new RecordOwner('posts', 'id')]];
