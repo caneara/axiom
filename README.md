@@ -39,6 +39,7 @@ The following validation rules are currently available:
 | DisposableEmail | validation.disposable_email | Requires the presence of an email address which is not disposable |
 | DoesNotExist    | validation.does_not_exist   | Requires that the given value is not present in a given database table / column - see class for details |
 | Decimal         | validation.decimal          | Requires that the given value is a decimal with an appropriate format - see class for details |
+| EncodedImage    | validation.encoded_image    | Requires that the given value is a base64-encoded image of a given mime type - see class for details |
 
 The package will receive new rules over time, however since these updates will not be breaking changes, they will not receive major version numbers unless Laravel changes in such a way that the package requires a re-write.
 
