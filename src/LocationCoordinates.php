@@ -39,7 +39,7 @@ class LocationCoordinates extends Rule
     {
         return Helper::getLocalizedErrorMessage(
             'location_coordinates',
-            'The :attribute must be a valid set of latitude and longitude coordinates'
+            'The :attribute must be a valid set of latitude and longitude coordinates, with a limit of 8 digits after a decimal point'
         );
     }
 
