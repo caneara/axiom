@@ -12,7 +12,7 @@ class CountryCodeTest extends Orchestra
 {
 
 	/** @test */
-	public function a_two_letter_country_code_can_be_validated()
+	public function the_two_letter_country_code_rule_can_be_validated()
 	{
 		// Define the validation rule
 		$rule = ['code' => [new CountryCode(2)]];
@@ -26,7 +26,7 @@ class CountryCodeTest extends Orchestra
 
 
 	/** @test */
-	public function a_three_letter_country_code_can_be_validated()
+	public function the_three_letter_country_code_rule_can_be_validated()
 	{
 		// Define the validation rule
 		$rule = ['code' => [new CountryCode(3)]];

@@ -41,6 +41,11 @@ The following validation rules are currently available:
 | Decimal             | validation.decimal              | Requires that the given value is a decimal with an appropriate format - see class for details |
 | EncodedImage        | validation.encoded_image        | Requires that the given value is a base64-encoded image of a given mime type - see class for details |
 | LocationCoordinates | validation.location_coordinates | Requires that the given value is a comma-separated set of latitude and longitude coordinates |
+| DateTimeBefore      | validation.datetime_before      | Requires that the given value is before a given date - see class for details |
+| DateTimeAfter       | validation.datetime_after       | Requires that the given value is after a given date - see class for details |
+| DateTimeBetween     | validation.datetime_between     | Requires that the given value is between two dates - see class for details |
+| FileExists          | validation.file_exists          | Requires that the given value is a path to an existing file - see class for details |
+| Equals              | validation.equals               | Requires that the given value is equal to another given value |
 
 The package will receive new rules over time, however since these updates will not be breaking changes, they will not receive major version numbers unless Laravel changes in such a way that the package requires a re-write.
 

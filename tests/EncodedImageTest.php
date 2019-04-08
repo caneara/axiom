@@ -44,7 +44,7 @@ class EncodedImageTest extends Orchestra
 
 
 	/** @test */
-	public function a_encoded_jpeg_image_can_be_validated()
+	public function the_encoded_jpeg_image_rule_can_be_validated()
 	{
 		// Define the validation rule
 		$png_rule  = ['image' => [new EncodedImage('png')]];

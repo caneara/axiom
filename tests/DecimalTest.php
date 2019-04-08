@@ -12,7 +12,7 @@ class DecimalTest extends Orchestra
 {
 
 	/** @test */
-	public function a_decimal_can_be_validated()
+	public function the_decimal_rule_can_be_validated()
 	{
 		// Define the validation rule
 		$rule = ['figure' => [new Decimal(4, 2)]];
@@ -32,7 +32,7 @@ class DecimalTest extends Orchestra
 
 
 	/** @test */
-	public function a_decimal_example_is_valid()
+	public function the_decimal_rule_example_is_valid()
 	{
 		// Define the validation rule
 		$rule = ['figure' => [$class = new Decimal(4, 2)]];

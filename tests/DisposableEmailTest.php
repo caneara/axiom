@@ -12,7 +12,7 @@ class DisposableEmailTest extends Orchestra
 {
 
 	/** @test */
-	public function a_disposable_email_can_be_validated()
+	public function the_disposable_email_rule_can_be_validated()
 	{
 		// Define the validation rule
 		$rule = ['email' => ['bail', 'email', new DisposableEmail()]];

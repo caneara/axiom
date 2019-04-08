@@ -12,7 +12,7 @@ class LanguageCodeTest extends Orchestra
 {
 
 	/** @test */
-	public function a_two_letter_language_code_can_be_validated()
+	public function the_two_letter_language_code_rule_can_be_validated()
 	{
 		// Define the validation rule
 		$rule = ['code' => [new LanguageCode(2)]];
@@ -26,7 +26,7 @@ class LanguageCodeTest extends Orchestra
 
 
 	/** @test */
-	public function a_three_letter_language_code_can_be_validated()
+	public function the_three_letter_language_code_rule_can_be_validated()
 	{
 		// Define the validation rule
 		$rule = ['code' => [new LanguageCode(3)]];

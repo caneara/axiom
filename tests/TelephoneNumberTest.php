@@ -12,7 +12,7 @@ class TelephoneNumberTest extends Orchestra
 {
 
 	/** @test */
-	public function a_telephone_number_can_be_validated()
+	public function the_telephone_number_rule_can_be_validated()
 	{
 		// Define the validation rule
 		$rule = ['phone' => [new TelephoneNumber]];

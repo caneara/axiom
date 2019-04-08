@@ -12,7 +12,7 @@ class MonetaryFigureTest extends Orchestra
 {
 
 	/** @test */
-	public function a_monetary_figure_can_be_validated()
+	public function the_monetary_figure_rule_can_be_validated()
 	{
 		// Define the validation rule
 		$rule = ['deposit' => [new MonetaryFigure('$', 4, 4)]];
@@ -37,7 +37,7 @@ class MonetaryFigureTest extends Orchestra
 
 
 	/** @test */
-	public function a_monetary_figure_example_is_valid()
+	public function the_monetary_figure_rule_example_is_valid()
 	{
 		// Define the validation rule
 		$rule = ['deposit' => [$class = new MonetaryFigure('$', 4, 2)]];

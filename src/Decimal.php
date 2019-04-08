@@ -25,9 +25,9 @@ class Decimal extends Rule
     /**
      * Determine if the validation rule passes.
      *
-     * The decimal requires two parameters:
-     * 2. The maximum number of digits before the decimal point.
-     * 3. The maximum number of digits after the decimal point.
+     * The rule has two parameters:
+     * 1. The maximum number of digits before the decimal point.
+     * 2. The maximum number of digits after the decimal point.
      *
      * @param string $attribute.
      * @param mixed $value.

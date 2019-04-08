@@ -98,7 +98,7 @@ class RecordOwnerTest extends Orchestra
 
 
 	/** @test */
-	public function a_record_owner_can_be_validated()
+	public function the_record_owner_rule_can_be_validated()
 	{
 		// Generate the fake data
 		$this->seedDatabase();

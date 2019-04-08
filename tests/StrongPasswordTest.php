@@ -12,7 +12,7 @@ class StrongPasswordTest extends Orchestra
 {
 
 	/** @test */
-	public function a_strong_password_can_be_validated()
+	public function the_strong_password_rule_can_be_validated()
 	{
 		// Define the validation rule
 		$rule = ['password' => [new StrongPassword]];

@@ -68,7 +68,7 @@ class DoesNotExistTest extends Orchestra
 
 
 	/** @test */
-	public function a_does_not_exist_can_be_validated()
+	public function the_does_not_exist_rule_can_be_validated()
 	{
 		// Generate the fake data
 		$this->seedDatabase();

@@ -12,7 +12,7 @@ class LocationCoordinatesTest extends Orchestra
 {
 
 	/** @test */
-	public function a_set_of_location_coordinates_can_be_validated()
+	public function the_location_coordinates_rule_can_be_validated()
 	{
 		// Define the validation rule
 		$rule = ['location' => [new LocationCoordinates]];
