@@ -44,6 +44,13 @@ The following validation rules are currently available:
 | FileExists          | validation.file_exists          | Requires that the given value is a path to an existing file - see class for details |
 | Equals              | validation.equals               | Requires that the given value is equal to another given value |
 | MacAddress          | validation.mac_address          | Requires that the given value is a valid MAC address |
+| ISBN                | validation.isbn                 | Requires that the given value is a valid ISBN-10 or ISBN-13 number |
+| EndsWith            | validation.ends_with            | Requires that the given value ends with a given string - see class for details |
+| EvenNumber          | validation.even_number          | Requires that the given value is an even number (decimals are first converted using intval) |
+| OddNumber           | validation.odd_number           | Requires that the given value is an odd number (decimals are first converted using intval) |
+| Lowercase           | validation.lowercase            | Requires that the given value is lowercase string |
+| Uppercase           | validation.uppercase            | Requires that the given value is uppercase string |
+| Titlecase           | validation.titlecase            | Requires that the given value is titlecase string |
 
 The package will receive new rules over time, however since these updates will not be breaking changes, they will not receive major version numbers unless Laravel changes in such a way that the package requires a re-write.
 
