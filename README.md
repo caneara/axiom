@@ -30,27 +30,30 @@ If the validation fails, the package will attempt to respond with a localized er
 
 The following validation rules are currently available:
 
-| Rule                | Message Key                     | Description |
-| ------------------- | ------------------------------- | ----------- |
-| StrongPassword      | validation.strong_password      | Requires the presence of a "strong" password - see class for details |
-| TelephoneNumber     | validation.telephone_number     | Requires the presence of a valid telephone number - see class for details |
-| RecordOwner         | validation.record_owner         | Requires the authenticated user's id to match the user_id column on a given database record e.g. owner:posts,id |
-| MonetaryFigure      | validation.monetary_figure      | Requires the presence of a monetary figure e.g $72.33 - see class for details |
-| DisposableEmail     | validation.disposable_email     | Requires the presence of an email address which is not disposable |
-| DoesNotExist        | validation.does_not_exist       | Requires that the given value is not present in a given database table / column - see class for details |
-| Decimal             | validation.decimal              | Requires that the given value is a decimal with an appropriate format - see class for details |
-| EncodedImage        | validation.encoded_image        | Requires that the given value is a base64-encoded image of a given mime type - see class for details |
-| LocationCoordinates | validation.location_coordinates | Requires that the given value is a comma-separated set of latitude and longitude coordinates |
-| FileExists          | validation.file_exists          | Requires that the given value is a path to an existing file - see class for details |
-| Equals              | validation.equals               | Requires that the given value is equal to another given value |
-| MacAddress          | validation.mac_address          | Requires that the given value is a valid MAC address |
-| ISBN                | validation.isbn                 | Requires that the given value is a valid ISBN-10 or ISBN-13 number |
-| EndsWith            | validation.ends_with            | Requires that the given value ends with a given string - see class for details |
-| EvenNumber          | validation.even_number          | Requires that the given value is an even number (decimals are first converted using intval) |
-| OddNumber           | validation.odd_number           | Requires that the given value is an odd number (decimals are first converted using intval) |
-| Lowercase           | validation.lowercase            | Requires that the given value is lowercase string |
-| Uppercase           | validation.uppercase            | Requires that the given value is uppercase string |
-| Titlecase           | validation.titlecase            | Requires that the given value is titlecase string |
+| Rule                  | Message Key                       | Description |
+| --------------------- | --------------------------------- | ----------- |
+| StrongPassword        | validation.strong_password        | Requires the presence of a "strong" password - see class for details |
+| TelephoneNumber       | validation.telephone_number       | Requires the presence of a valid telephone number - see class for details |
+| RecordOwner           | validation.record_owner           | Requires the authenticated user's id to match the user_id column on a given database record e.g. owner:posts,id |
+| MonetaryFigure        | validation.monetary_figure        | Requires the presence of a monetary figure e.g $72.33 - see class for details |
+| DisposableEmail       | validation.disposable_email       | Requires the presence of an email address which is not disposable |
+| DoesNotExist          | validation.does_not_exist         | Requires that the given value is not present in a given database table / column - see class for details |
+| Decimal               | validation.decimal                | Requires that the given value is a decimal with an appropriate format - see class for details |
+| EncodedImage          | validation.encoded_image          | Requires that the given value is a base64-encoded image of a given mime type - see class for details |
+| LocationCoordinates   | validation.location_coordinates   | Requires that the given value is a comma-separated set of latitude and longitude coordinates |
+| FileExists            | validation.file_exists            | Requires that the given value is a path to an existing file - see class for details |
+| Equals                | validation.equals                 | Requires that the given value is equal to another given value |
+| MacAddress            | validation.mac_address            | Requires that the given value is a valid MAC address |
+| ISBN                  | validation.isbn                   | Requires that the given value is a valid ISBN-10 or ISBN-13 number |
+| EndsWith              | validation.ends_with              | Requires that the given value ends with a given string - see class for details |
+| EvenNumber            | validation.even_number            | Requires that the given value is an even number (decimals are first converted using intval) |
+| OddNumber             | validation.odd_number             | Requires that the given value is an odd number (decimals are first converted using intval) |
+| Lowercase             | validation.lowercase              | Requires that the given value is a lowercase string |
+| Uppercase             | validation.uppercase              | Requires that the given value is a uppercase string |
+| Titlecase             | validation.titlecase              | Requires that the given value is a titlecase string |
+| Domain                | validation.domain                 | Requires that the given value be a domain e.g. google.com, www.google.com |
+| CitizenIdentification | validation.citizen_identification | Requires that the given value be a citizen identification number of usa, uk or france (see class for details) |
+| WithoutWhitespace     | validation.without_whitespace	    | Requires that the given value not include any whitespace characters |
 
 The package will receive new rules over time, however since these updates will not be breaking changes, they will not receive major version numbers unless Laravel changes in such a way that the package requires a re-write.
 
