@@ -20,7 +20,7 @@ use Alphametric\Validation\Rules\StrongPassword;
 // ...
 
 $request->validate([
-    'password' => ['bail', 'required', StrongPassword],
+    'password' => ['bail', 'required', new StrongPassword],
 ]);
 ```
 
