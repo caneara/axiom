@@ -19,7 +19,8 @@ class CountryCodeTest extends Orchestra
 
 		// Execute the tests
 		$this->assertTrue(validator(['code' => 'US'], $rule)->passes());
-		$this->assertTrue(validator(['code' => 'VU'], $rule)->passes());
+		$this->assertTrue(validator(['code' => 'GB'], $rule)->passes());
+		$this->assertTrue(validator(['code' => 'FR'], $rule)->passes());
 		$this->assertFalse(validator(['code' => 'xx'], $rule)->passes());
 	}
 
@@ -32,8 +33,9 @@ class CountryCodeTest extends Orchestra
 		$rule = ['code' => [new CountryCode(3)]];
 
 		// Execute the tests
-		$this->assertTrue(validator(['code' => 'SAU'], $rule)->passes());
-		$this->assertTrue(validator(['code' => 'SDN'], $rule)->passes());
+		$this->assertTrue(validator(['code' => 'USA'], $rule)->passes());
+		$this->assertTrue(validator(['code' => 'GBR'], $rule)->passes());
+		$this->assertTrue(validator(['code' => 'FRA'], $rule)->passes());
 		$this->assertFalse(validator(['code' => 'xxx'], $rule)->passes());
 	}
 

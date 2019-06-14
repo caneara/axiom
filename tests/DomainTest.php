@@ -24,6 +24,10 @@ class DomainTest extends Orchestra
 		$this->assertFalse(validator(['domain' => 'https://google.com'], $rule)->passes());
 		$this->assertFalse(validator(['domain' => 'http://google'], $rule)->passes());
 		$this->assertFalse(validator(['domain' => 'https://google'], $rule)->passes());
+		$this->assertFalse(validator(['domain' => 'https://google.com/test'], $rule)->passes());
+		$this->assertFalse(validator(['domain' => 'google.com/test'], $rule)->passes());
+		$this->assertFalse(validator(['domain' => 'www.google.com/test'], $rule)->passes());
+		$this->assertFalse(validator(['domain' => 'www.google.com/test/test'], $rule)->passes());
 		$this->assertTrue(validator(['domain' => 'google.com'], $rule)->passes());
 		$this->assertTrue(validator(['domain' => 'www.google.com'], $rule)->passes());
 	}
