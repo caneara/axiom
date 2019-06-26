@@ -4,7 +4,7 @@
 namespace Alphametric\Validation\Rules;
 
 // Using directives
-use Str;
+use Illuminate\Support\Str;
 use Illuminate\Http\UploadedFile;
 
 // Encoded image rule
