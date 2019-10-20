@@ -18,6 +18,6 @@ class Helper
 	 **/
 	public static function getLocalizedErrorMessage($key, $default)
 	{
-		return trans("validation.$key") === $key ? $default : trans("validation.$key");
+		return trans("validation.$key") === "validation.$key" ? $default : trans("validation.$key");
 	}
 }
