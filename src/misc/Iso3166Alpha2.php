@@ -258,6 +258,7 @@ class Iso3166Alpha2
 		'WS' => 'Samoa',
 		'YE' => 'Yemen',
 		'YT' => 'Mayotte',
+		'XK' => 'Republic of Kosovo',
 		'ZA' => 'South Africa',
 		'ZM' => 'Zambia',
 		'ZW' => 'Zimbabwe',
