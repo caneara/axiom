@@ -26,6 +26,13 @@ $request->validate([
 
 If the validation fails, the package will attempt to respond with a localized error message (see message keys below). If the key does not exist, it will fall back to a hard-coded English language version.
 
+**IMPORTANT**: As with all custom rules, you cannot use a pipe-delimited string. You must instead use an array e.g.
+
+```php
+'password' => ['bail', 'required', new StrongPassword] // correct
+'password' => 'bail|required|new StrongPassword' // wrong
+```
+
 ## Available rules
 
 The following validation rules are currently available:
