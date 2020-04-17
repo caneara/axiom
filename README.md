@@ -61,6 +61,7 @@ The following validation rules are currently available:
 | Domain                | validation.domain                 | Requires that the given value be a domain e.g. google.com, www.google.com |
 | CitizenIdentification | validation.citizen_identification | Requires that the given value be a citizen identification number of usa, uk or france (see class for details) |
 | WithoutWhitespace     | validation.without_whitespace	    | Requires that the given value not include any whitespace characters |
+| Iban					| validation.iban					| Requires that the given value is a valid International Bank Account Number (IBAN) |
 
 The package will receive new rules over time, however since these updates will not be breaking changes, they will not receive major version numbers unless Laravel changes in such a way that the package requires a re-write.
 
