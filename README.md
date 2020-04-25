@@ -30,10 +30,13 @@ composer require mattkingshott/axiom
 Axiom includes several breaking changes from the original package, so you'll need to follow these steps if you were using the old version:
 
 1. Ensure that you are using PHP 7.4 or later.
-2. Replace all instances of `use Alphametric\Validation` with `use Axiom`.
-3. The `EndsWith` rule has been removed as Laravel now natively supports this.
-4. The `Equals` rule has been removed. Instead, you should use Laravel's native `in` rule with a single option.
-5. The `DoesNotExist` rule has been renamed to `Missing`.
+2. Remove `alphametric/laravel-validation-rules` from your `composer.json` file.
+3. Run `composer update` to remove the package from your `vendor` directory.
+4. Install Axiom by running `composer require mattkingshott/axiom`.
+5. Replace all instances of `use Alphametric\Validation` with `use Axiom`.
+6. The `EndsWith` rule has been removed as Laravel now natively supports this.
+7. The `Equals` rule has been removed. Instead, you should use Laravel's native `in` rule with a single option.
+8. The `DoesNotExist` rule has been renamed to `Missing`.
 
 ## Usage
 
