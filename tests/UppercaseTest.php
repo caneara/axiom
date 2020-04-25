@@ -1,25 +1,23 @@
-<?php
+<?php declare(strict_types = 1);
 
 // Namespace
-namespace Alphametric\Validation\Rules\Tests;
+namespace Axiom\Rules\Tests;
 
 // Using directives
-use Alphametric\Validation\Rules\Uppercase;
-use Orchestra\Testbench\TestCase as Orchestra;
+use Axiom\Rules\Uppercase;
+use Orchestra\Testbench\TestCase;
 
 // Uppercase test
-class UppercaseTest extends Orchestra
+class UppercaseTest extends TestCase
 {
 
-	/** @test */
-	public function the_uppercase_rule_can_be_validated()
-	{
-		// Define the validation rule
-		$rule = ['text' => [new Uppercase]];
+    /** @test */
+    public function the_uppercase_rule_can_be_validated()
+    {
+        $rule = ['text' => [new Uppercase]];
 
-		// Execute the tests
-		$this->assertFalse(validator(['text' => 'hello'], $rule)->passes());
-		$this->assertTrue(validator(['text' => 'HELLO'], $rule)->passes());
-	}
+        $this->assertFalse(validator(['text' => 'hello'], $rule)->passes());
+        $this->assertTrue(validator(['text' => 'HELLO'], $rule)->passes());
+    }
 
 }

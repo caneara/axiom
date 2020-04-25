@@ -1,25 +1,23 @@
-<?php
+<?php declare(strict_types = 1);
 
 // Namespace
-namespace Alphametric\Validation\Rules\Tests;
+namespace Axiom\Rules\Tests;
 
 // Using directives
-use Orchestra\Testbench\TestCase as Orchestra;
-use Alphametric\Validation\Rules\DisposableEmail;
+use Axiom\Rules\DisposableEmail;
+use Orchestra\Testbench\TestCase;
 
 // Disposable email test
-class DisposableEmailTest extends Orchestra
+class DisposableEmailTest extends TestCase
 {
 
-	/** @test */
-	public function the_disposable_email_rule_can_be_validated()
-	{
-		// Define the validation rule
-		$rule = ['email' => ['bail', 'email', new DisposableEmail()]];
+    /** @test */
+    public function the_disposable_email_rule_can_be_validated()
+    {
+        $rule = ['email' => ['bail', 'email', new DisposableEmail()]];
 
-		// Execute the tests
-		$this->assertTrue(validator(['email' => 'john.doe@gmail.com'], $rule)->passes());
-		$this->assertFalse(validator(['email' => 'john.doe@mailinator.com'], $rule)->passes());
-	}
+        $this->assertTrue(validator(['email' => 'john.doe@gmail.com'], $rule)->passes());
+        $this->assertFalse(validator(['email' => 'john.doe@mailinator.com'], $rule)->passes());
+    }
 
 }

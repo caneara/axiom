@@ -1,25 +1,23 @@
-<?php
+<?php declare(strict_types = 1);
 
 // Namespace
-namespace Alphametric\Validation\Rules\Tests;
+namespace Axiom\Rules\Tests;
 
 // Using directives
-use Alphametric\Validation\Rules\Lowercase;
-use Orchestra\Testbench\TestCase as Orchestra;
+use Axiom\Rules\Lowercase;
+use Orchestra\Testbench\TestCase;
 
 // Lowercase test
-class LowercaseTest extends Orchestra
+class LowercaseTest extends TestCase
 {
 
-	/** @test */
-	public function the_lowercase_rule_can_be_validated()
-	{
-		// Define the validation rule
-		$rule = ['text' => [new Lowercase]];
+    /** @test */
+    public function the_lowercase_rule_can_be_validated()
+    {
+        $rule = ['text' => [new Lowercase]];
 
-		// Execute the tests
-		$this->assertTrue(validator(['text' => 'hello'], $rule)->passes());
-		$this->assertFalse(validator(['text' => 'HELLO'], $rule)->passes());
-	}
+        $this->assertTrue(validator(['text' => 'hello'], $rule)->passes());
+        $this->assertFalse(validator(['text' => 'HELLO'], $rule)->passes());
+    }
 
 }

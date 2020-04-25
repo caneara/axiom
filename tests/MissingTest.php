@@ -4,36 +4,19 @@
 namespace Axiom\Rules\Tests;
 
 // Using directives
-use Axiom\Rules\RecordOwner;
+use Axiom\Rules\Missing;
 use Orchestra\Testbench\TestCase;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Auth;
 
-// Record owner test
-class RecordOwnerTest extends TestCase
+// Missing test
+class MissingTest extends TestCase
 {
 
     /**
-     * The other user id.
+     * The user id.
      *
      **/
-    protected int $other;
-
-
-
-    /**
-     * The owner user id.
-     *
-     **/
-    protected int $owner;
-
-
-
-    /**
-     * The post id.
-     *
-     **/
-    protected int $post;
+    protected int $user;
 
 
 
@@ -65,40 +48,24 @@ class RecordOwnerTest extends TestCase
     {
         $this->loadMigrationsFrom(realpath(__DIR__ . '/..') . '/support/migrations');
 
-        $this->owner = DB::table('users')->insertGetId([
+        $this->user = DB::table('users')->insertGetId([
             'name'     => 'John Doe',
             'email'    => 'john@example.com',
             'password' => bcrypt('password'),
-        ]);
-
-        $this->other = DB::table('users')->insertGetId([
-            'name'     => 'Jane Doe',
-            'email'    => 'jane@example.com',
-            'password' => bcrypt('password'),
-        ]);
-
-        $this->post = DB::table('posts')->insertGetId([
-            'title'   => 'Post #1',
-            'user_id' => $this->owner,
         ]);
     }
 
 
 
     /** @test */
-    public function the_record_owner_rule_can_be_validated()
+    public function the_does_not_exist_rule_can_be_validated()
     {
         $this->seedDatabase();
 
-        $rule = ['post_id' => [new RecordOwner('posts', 'id')]];
+        $rule = ['user_id' => [new Missing('users', 'id')]];
 
-        $this->assertFalse(validator(['post_id' => $this->post], $rule)->passes());
-
-        Auth::loginUsingId($this->other);
-        $this->assertFalse(validator(['post_id' => $this->post], $rule)->passes());
-
-        Auth::loginUsingId($this->owner);
-        $this->assertTrue(validator(['post_id' => $this->post], $rule)->passes());
+        $this->assertTrue(validator(['user_id' => 'non_existent_user'], $rule)->passes());
+        $this->assertFalse(validator(['user_id' => $this->user], $rule)->passes());
     }
 
 }
