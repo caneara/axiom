@@ -87,7 +87,7 @@ The following validation rules are currently available:
 | Domain                | validation.domain                 | Requires that the given value be a domain e.g. google.com, www.google.com                                             |
 | CitizenIdentification | validation.citizen_identification | Requires that the given value be a citizen identification number of USA, UK, France or Brazil (see class for details) |
 | WithoutWhitespace     | validation.without_whitespace     | Requires that the given value not include any whitespace characters                                                   |
-| MaxWords              | validation.max_words              | Requires that the given value cannot contains more words than the specified - see class for details                   |
+| MaxWords              | validation.max_words              | Requires that the given value cannot contain more words than specified                                                |
 
 ## Contributing
 

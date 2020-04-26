@@ -6,6 +6,7 @@ use Axiom\Types\Rule;
 
 class MaxWords extends Rule
 {
+
     /**
      * Determine if the validation rule passes.
      *
