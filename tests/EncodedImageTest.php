@@ -1,13 +1,10 @@
 <?php declare(strict_types = 1);
 
-// Namespace
 namespace Axiom\Rules\Tests;
 
-// Using directives
 use Axiom\Rules\EncodedImage;
 use Orchestra\Testbench\TestCase;
 
-// Encoded image test
 class EncodedImageTest extends TestCase
 {
 
@@ -30,9 +27,9 @@ class EncodedImageTest extends TestCase
      * Generate an invalid image file with a given mime type.
      *
      **/
-    protected function invalidImage(string $mime = "") : string
+    protected function invalidImage(string $mime = '') : string
     {
-        return "data:image/{$mime};base64," . base64_encode("not an image file");
+        return "data:image/{$mime};base64," . base64_encode('not an image file');
     }
 
 

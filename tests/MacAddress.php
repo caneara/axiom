@@ -1,13 +1,10 @@
 <?php declare(strict_types = 1);
 
-// Namespace
 namespace Axiom\Rules\Tests;
 
-// Using directives
 use Axiom\Rules\MacAddress;
 use Orchestra\Testbench\TestCase;
 
-// Mac address test
 class MacAddressTest extends TestCase
 {
 

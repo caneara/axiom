@@ -1,13 +1,10 @@
 <?php declare(strict_types = 1);
 
-// Namespace
 namespace Axiom\Rules\Tests;
 
-// Using directives
 use Axiom\Rules\TelephoneNumber;
 use Orchestra\Testbench\TestCase;
 
-// Telephone number test
 class TelephoneNumberTest extends TestCase
 {
 

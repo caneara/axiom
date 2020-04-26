@@ -1,13 +1,10 @@
 <?php declare(strict_types = 1);
 
-// Namespace
 namespace Axiom\Rules\Tests;
 
-// Using directives
 use Axiom\Rules\ISBN;
 use Orchestra\Testbench\TestCase;
 
-// ISBN test
 class ISBNTest extends TestCase
 {
 

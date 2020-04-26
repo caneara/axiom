@@ -1,12 +1,9 @@
 <?php declare(strict_types = 1);
 
-// Namespace
 namespace Axiom\Rules;
 
-// Using directives
 use Axiom\Types\Rule;
 
-// Lowercase rule
 class Lowercase extends Rule
 {
 

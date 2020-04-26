@@ -1,13 +1,10 @@
 <?php declare(strict_types = 1);
 
-// Namespace
 namespace Axiom\Rules\Tests;
 
-// Using directives
 use Orchestra\Testbench\TestCase;
 use Axiom\Rules\CitizenIdentification;
 
-// Citizen identification test
 class CitizenIdentificationTest extends TestCase
 {
 

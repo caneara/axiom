@@ -1,13 +1,10 @@
 <?php declare(strict_types = 1);
 
-// Namespace
 namespace Axiom\Rules;
 
-// Using directives
 use Axiom\Types\Rule;
 use Illuminate\Support\Facades\Storage;
 
-// File exists rule
 class FileExists extends Rule
 {
 

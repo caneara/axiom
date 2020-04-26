@@ -1,12 +1,9 @@
 <?php declare(strict_types = 1);
 
-// Namespace
 namespace Axiom\Rules;
 
-// Using directives
 use Axiom\Types\Rule;
 
-// Strong password rule
 class StrongPassword extends Rule
 {
 
@@ -21,7 +18,7 @@ class StrongPassword extends Rule
     public function passes($attribute, $value) : bool
     {
         return preg_match(
-            "/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@()$%^&*=_{}[\]:;\"'|\\<>,.\/~`±§+-]).{12,30}$/", $value
+            '/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@()$%^&*=_{}[\]:;"\'|\\<>,.\/~`±§+-]).{12,30}$/', $value
         ) > 0;
     }
 

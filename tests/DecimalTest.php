@@ -1,13 +1,10 @@
 <?php declare(strict_types = 1);
 
-// Namespace
 namespace Axiom\Rules\Tests;
 
-// Using directives
 use Axiom\Rules\Decimal;
 use Orchestra\Testbench\TestCase;
 
-// Decimal test
 class DecimalTest extends TestCase
 {
 
@@ -34,7 +31,7 @@ class DecimalTest extends TestCase
     {
         $rule = ['figure' => [$class = new Decimal(4, 2)]];
 
-        $this->assertTrue(validator(['figure' => $class -> example()], $rule)->passes());
+        $this->assertTrue(validator(['figure' => $class->example()], $rule)->passes());
     }
 
 }

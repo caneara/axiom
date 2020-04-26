@@ -1,14 +1,11 @@
 <?php declare(strict_types = 1);
 
-// Namespace
 namespace Axiom\Rules;
 
-// Using directives
 use Axiom\Types\Rule;
 use Axiom\Support\Iso6391Alpha2;
 use Axiom\Support\Iso6391Alpha3;
 
-// Language code rule
 class LanguageCode extends Rule
 {
 

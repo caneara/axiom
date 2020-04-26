@@ -1,12 +1,9 @@
 <?php declare(strict_types = 1);
 
-// Namespace
 namespace Axiom\Types;
 
-// Using directives
 use Illuminate\Contracts\Validation\Rule as BaseRule;
 
-// Rule
 abstract class Rule implements BaseRule
 {
 

@@ -1,14 +1,11 @@
 <?php declare(strict_types = 1);
 
-// Namespace
 namespace Axiom\Rules\Tests;
 
-// Using directives
 use Axiom\Rules\Missing;
 use Orchestra\Testbench\TestCase;
 use Illuminate\Support\Facades\DB;
 
-// Missing test
 class MissingTest extends TestCase
 {
 

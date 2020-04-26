@@ -1,15 +1,12 @@
 <?php declare(strict_types = 1);
 
-// Namespace
 namespace Axiom\Rules\Tests;
 
-// Using directives
 use Axiom\Rules\RecordOwner;
 use Orchestra\Testbench\TestCase;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 
-// Record owner test
 class RecordOwnerTest extends TestCase
 {
 

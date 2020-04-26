@@ -1,12 +1,9 @@
 <?php declare(strict_types = 1);
 
-// Namespace
 namespace Axiom\Rules;
 
-// Using directives
 use Axiom\Types\Rule;
 
-// Without whitespace rule
 class WithoutWhitespace extends Rule
 {
 
@@ -16,7 +13,7 @@ class WithoutWhitespace extends Rule
      **/
     public function passes($attribute, $value) : bool
     {
-        return preg_match("/\s/", $value) === 0;
+        return preg_match('/\s/', $value) === 0;
     }
 
 

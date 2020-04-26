@@ -1,13 +1,10 @@
 <?php declare(strict_types = 1);
 
-// Namespace
 namespace Axiom\Rules\Tests;
 
-// Using directives
 use Axiom\Rules\DisposableEmail;
 use Orchestra\Testbench\TestCase;
 
-// Disposable email test
 class DisposableEmailTest extends TestCase
 {
 

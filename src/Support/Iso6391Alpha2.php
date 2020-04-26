@@ -1,9 +1,7 @@
 <?php declare(strict_types = 1);
 
-// Namespace
 namespace Axiom\Support;
 
-// ISO 639-1 Alpha-2
 class Iso6391Alpha2
 {
 

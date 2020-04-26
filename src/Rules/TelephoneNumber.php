@@ -1,12 +1,9 @@
 <?php declare(strict_types = 1);
 
-// Namespace
 namespace Axiom\Rules;
 
-// Using directives
 use Axiom\Types\Rule;
 
-// Telephone number rule
 class TelephoneNumber extends Rule
 {
 
@@ -19,7 +16,7 @@ class TelephoneNumber extends Rule
      **/
     public function passes($attribute, $value) : bool
     {
-        return preg_match("/^[0-9]{7,15}$/", $value) > 0;
+        return preg_match('/^[0-9]{7,15}$/', $value) > 0;
     }
 
 

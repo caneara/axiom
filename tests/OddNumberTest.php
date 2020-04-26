@@ -1,13 +1,10 @@
 <?php declare(strict_types = 1);
 
-// Namespace
 namespace Axiom\Rules\Tests;
 
-// Using directives
 use Axiom\Rules\OddNumber;
 use Orchestra\Testbench\TestCase;
 
-// Odd number test
 class OddNumberTest extends TestCase
 {
 

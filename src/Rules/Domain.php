@@ -1,12 +1,9 @@
 <?php declare(strict_types = 1);
 
-// Namespace
 namespace Axiom\Rules;
 
-// Using directives
 use Axiom\Types\Rule;
 
-// Domain rule
 class Domain extends Rule
 {
 
@@ -16,7 +13,7 @@ class Domain extends Rule
      **/
     public function passes($attribute, $value) : bool
     {
-        return preg_match("/^([\w-]+\.)*[\w\-]+\.\w{2,10}$/", $value) > 0;
+        return preg_match('/^([\w-]+\.)*[\w\-]+\.\w{2,10}$/', $value) > 0;
     }
 
 

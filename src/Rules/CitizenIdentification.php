@@ -1,14 +1,11 @@
 <?php declare(strict_types = 1);
 
-// Namespace
 namespace Axiom\Rules;
 
-// Using directives
 use Axiom\Types\Rule;
 use Axiom\Support\Iso3166Alpha2;
 use Axiom\Support\Iso3166Alpha3;
 
-// Citizen identification rule
 class CitizenIdentification extends Rule
 {
 
@@ -27,15 +24,15 @@ class CitizenIdentification extends Rule
 
             case 'US':
             case 'USA':
-                return $this -> verifyUnitedStates($value);
+                return $this->verifyUnitedStates($value);
 
             case 'GB':
             case 'GBR':
-                return $this -> verifyUnitedKingdom($value);
+                return $this->verifyUnitedKingdom($value);
 
             case 'FR':
             case 'FRA':
-                return $this -> verifyFrance($value);
+                return $this->verifyFrance($value);
 
             default:
                 return false;
@@ -65,7 +62,7 @@ class CitizenIdentification extends Rule
      **/
     protected function verifyFrance($value) : bool
     {
-        return preg_match("/^[1,2][ ]?[0-9]{2}[ ]?[0,1,2,3,5][0-9][ ]?[0-9A-Z]{5}[ ]?[0-9]{3}[ ]?[0-9]{2}$/", $value) > 0;
+        return preg_match('/^[1,2][ ]?[0-9]{2}[ ]?[0,1,2,3,5][0-9][ ]?[0-9A-Z]{5}[ ]?[0-9]{3}[ ]?[0-9]{2}$/', $value) > 0;
     }
 
 
@@ -76,7 +73,7 @@ class CitizenIdentification extends Rule
      **/
     protected function verifyUnitedKingdom($value) : bool
     {
-        return preg_match("/^[A-CEGHJ-PR-TW-Z]{1}[A-CEGHJ-NPR-TW-Z]{1}[0-9]{6}[A-DFM]{0,1}$/", $value) > 0;
+        return preg_match('/^[A-CEGHJ-PR-TW-Z]{1}[A-CEGHJ-NPR-TW-Z]{1}[0-9]{6}[A-DFM]{0,1}$/', $value) > 0;
     }
 
 
@@ -87,7 +84,7 @@ class CitizenIdentification extends Rule
      **/
     protected function verifyUnitedStates($value) : bool
     {
-        return preg_match("/^(?!000|666)[0-8][0-9]{2}-(?!00)[0-9]{2}-(?!0000)[0-9]{4}$/", $value) > 0;
+        return preg_match('/^(?!000|666)[0-8][0-9]{2}-(?!00)[0-9]{2}-(?!0000)[0-9]{4}$/', $value) > 0;
     }
 
 }

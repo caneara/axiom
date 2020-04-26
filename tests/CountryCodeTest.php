@@ -1,13 +1,10 @@
 <?php declare(strict_types = 1);
 
-// Namespace
 namespace Axiom\Rules\Tests;
 
-// Using directives
 use Axiom\Rules\CountryCode;
 use Orchestra\Testbench\TestCase;
 
-// Country code test
 class CountryCodeTest extends TestCase
 {
 

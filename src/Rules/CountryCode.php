@@ -1,14 +1,11 @@
 <?php declare(strict_types = 1);
 
-// Namespace
 namespace Axiom\Rules;
 
-// Using directives
 use Axiom\Types\Rule;
 use Axiom\Support\Iso3166Alpha2;
 use Axiom\Support\Iso3166Alpha3;
 
-// Country code rule
 class CountryCode extends Rule
 {
 

@@ -1,14 +1,11 @@
 <?php declare(strict_types = 1);
 
-// Namespace
 namespace Axiom\Rules\Tests;
 
-// Using directives
 use Axiom\Rules\FileExists;
 use Orchestra\Testbench\TestCase;
 use Illuminate\Support\Facades\Storage;
 
-// File exists test
 class FileExistsTest extends TestCase
 {
 

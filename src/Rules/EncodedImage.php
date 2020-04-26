@@ -1,14 +1,11 @@
 <?php declare(strict_types = 1);
 
-// Namespace
 namespace Axiom\Rules;
 
-// Using directives
 use Axiom\Types\Rule;
 use Illuminate\Support\Str;
 use Illuminate\Http\UploadedFile;
 
-// Encoded image rule
 class EncodedImage extends Rule
 {
 
@@ -51,8 +48,7 @@ class EncodedImage extends Rule
             return false;
         }
 
-        $result = validator(['file' => $this->createTemporaryFile($value)], ['file' => 'image'])
-               -> passes();
+        $result = validator(['file' => $this->createTemporaryFile($value)], ['file' => 'image'])->passes();
 
         fclose($this->file);
 

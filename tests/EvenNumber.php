@@ -1,13 +1,10 @@
 <?php declare(strict_types = 1);
 
-// Namespace
 namespace Axiom\Rules\Tests;
 
-// Using directives
 use Axiom\Rules\EvenNumber;
 use Orchestra\Testbench\TestCase;
 
-// Even number test
 class EvenNumberTest extends TestCase
 {
 

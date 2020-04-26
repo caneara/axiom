@@ -1,14 +1,11 @@
 <?php declare(strict_types = 1);
 
-// Namespace
 namespace Axiom\Rules;
 
-// Using directives
 use Exception;
 use Axiom\Types\Rule;
 use Illuminate\Support\Str;
 
-// Disposable email rule
 class DisposableEmail extends Rule
 {
 
