@@ -13,7 +13,7 @@ class CitizenIdentification extends Rule
      * Determine if the validation rule passes.
      *
      * The rule requires one parameter:
-     * 1. The identification type to use ('USA' or 'US, 'GBR' or 'GB', 'FRA' or 'FR).
+     * 1. The identification type to use ('USA' or 'US, 'GBR' or 'GB', 'FRA' or 'FR', 'BRA' or 'BR').
      *
      **/
     public function passes($attribute, $value) : bool
@@ -33,6 +33,10 @@ class CitizenIdentification extends Rule
             case 'FR':
             case 'FRA':
                 return $this->verifyFrance($value);
+
+            case 'BR':
+            case 'BRA':
+                return $this->verifyBrazil($value);
 
             default:
                 return false;
@@ -85,6 +89,33 @@ class CitizenIdentification extends Rule
     protected function verifyUnitedStates($value) : bool
     {
         return preg_match('/^(?!000|666)[0-8][0-9]{2}-(?!00)[0-9]{2}-(?!0000)[0-9]{4}$/', $value) > 0;
+    }
+
+    /**
+     * Verify whether the given value is a valid Brazil citizen number.
+     *
+     **/
+    protected function verifyBrazil($value) : bool
+    {
+        $value = preg_replace('/[^0-9]/is', '', $value);
+
+        if (strlen($value) !== 11 || preg_match('/(\d)\1{10}/', $value)) {
+            return false;
+        }
+
+        for ($t = 9; $t < 11; $t++) {
+            for ($d = 0, $c = 0; $c < $t; $c++) {
+                $d += $value[$c] * (($t + 1) - $c);
+            }
+
+            $d = ((10 * $d) % 11) % 10;
+
+            if ($value[$c] != $d) {
+                return false;
+            }
+        }
+
+        return true;
     }
 
 }
