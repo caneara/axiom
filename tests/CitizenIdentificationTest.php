@@ -64,4 +64,24 @@ class CitizenIdentificationTest extends TestCase
         $this->assertTrue(validator(['id' => '1 51 02 46102 043 25'], $rule)->passes());
     }
 
+    
+    
+    /** @test */
+    public function the_citizen_identification_rule_can_be_validated_for_bra()
+    {
+        $rule = ['id' => [new CitizenIdentification('bra')]];
+
+        $this->assertFalse(validator(['id' => '9876543218'], $rule)->passes());
+        $this->assertFalse(validator(['id' => '03464227362'], $rule)->passes());
+        $this->assertTrue(validator(['id' => '166.525.300-23'], $rule)->passes());
+        $this->assertTrue(validator(['id' => '16652530023'], $rule)->passes());
+
+        $rule = ['id' => [new CitizenIdentification('br')]];
+
+        $this->assertFalse(validator(['id' => '9876543218'], $rule)->passes());
+        $this->assertFalse(validator(['id' => '03464227362'], $rule)->passes());
+        $this->assertTrue(validator(['id' => '166.525.300-23'], $rule)->passes());
+        $this->assertTrue(validator(['id' => '16652530023'], $rule)->passes());
+    }
+
 }
