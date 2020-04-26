@@ -27,15 +27,15 @@ class CitizenIdentification extends Rule
 
             case 'US':
             case 'USA':
-                return preg_match("/^(?!000|666)[0-8][0-9]{2}-(?!00)[0-9]{2}-(?!0000)[0-9]{4}$/", $value) > 0;
+                return $this -> verifyUnitedStates($value);
 
             case 'GB':
             case 'GBR':
-                return preg_match("/^[A-CEGHJ-PR-TW-Z]{1}[A-CEGHJ-NPR-TW-Z]{1}[0-9]{6}[A-DFM]{0,1}$/", $value) > 0;
+                return $this -> verifyUnitedKingdom($value);
 
             case 'FR':
             case 'FRA':
-                return preg_match("/^[1,2][ ]?[0-9]{2}[ ]?[0,1,2,3,5][0-9][ ]?[0-9A-Z]{5}[ ]?[0-9]{3}[ ]?[0-9]{2}$/", $value) > 0;
+                return $this -> verifyFrance($value);
 
             default:
                 return false;
@@ -55,6 +55,39 @@ class CitizenIdentification extends Rule
             'citizen_identification',
             'The :attribute must be a valid form of identification'
         );
+    }
+
+
+
+    /**
+     * Verify whether the given value is a valid French citizen number.
+     *
+     **/
+    protected function verifyFrance($value) : bool
+    {
+        return preg_match("/^[1,2][ ]?[0-9]{2}[ ]?[0,1,2,3,5][0-9][ ]?[0-9A-Z]{5}[ ]?[0-9]{3}[ ]?[0-9]{2}$/", $value) > 0;
+    }
+
+
+
+    /**
+     * Verify whether the given value is a valid United Kingdom citizen number.
+     *
+     **/
+    protected function verifyUnitedKingdom($value) : bool
+    {
+        return preg_match("/^[A-CEGHJ-PR-TW-Z]{1}[A-CEGHJ-NPR-TW-Z]{1}[0-9]{6}[A-DFM]{0,1}$/", $value) > 0;
+    }
+
+
+
+    /**
+     * Verify whether the given value is a valid United States citizen number.
+     *
+     **/
+    protected function verifyUnitedStates($value) : bool
+    {
+        return preg_match("/^(?!000|666)[0-8][0-9]{2}-(?!00)[0-9]{2}-(?!0000)[0-9]{4}$/", $value) > 0;
     }
 
 }
