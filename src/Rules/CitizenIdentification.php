@@ -91,8 +91,8 @@ class CitizenIdentification extends Rule
         return preg_match('/^(?!000|666)[0-8][0-9]{2}-(?!00)[0-9]{2}-(?!0000)[0-9]{4}$/', $value) > 0;
     }
 
-    
-    
+
+
     /**
      * Verify whether the given value is a valid Brazil citizen number.
      *
@@ -106,6 +106,7 @@ class CitizenIdentification extends Rule
         }
 
         for ($t = 9; $t < 11; $t++) {
+
             for ($d = 0, $c = 0; $c < $t; $c++) {
                 $d += $value[$c] * (($t + 1) - $c);
             }
@@ -115,6 +116,7 @@ class CitizenIdentification extends Rule
             if ($value[$c] != $d) {
                 return false;
             }
+
         }
 
         return true;
