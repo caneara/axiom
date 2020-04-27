@@ -1,5 +1,5 @@
 # Credit to spatie.be - you guys are legends!
-name: build
+name: tests
 
 on: [push, pull_request]
 
