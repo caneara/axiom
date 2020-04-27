@@ -29,5 +29,4 @@ class LanguageCodeTest extends TestCase
         $this->assertTrue(validator(['code' => 'RUS'], $rule)->passes());
         $this->assertFalse(validator(['code' => 'xxx'], $rule)->passes());
     }
-
 }

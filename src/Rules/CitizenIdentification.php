@@ -2,9 +2,9 @@
 
 namespace Axiom\Rules;
 
-use Axiom\Types\Rule;
 use Axiom\Support\Iso3166Alpha2;
 use Axiom\Support\Iso3166Alpha3;
+use Axiom\Types\Rule;
 
 class CitizenIdentification extends Rule
 {
@@ -106,7 +106,6 @@ class CitizenIdentification extends Rule
         }
 
         for ($t = 9; $t < 11; $t++) {
-
             for ($d = 0, $c = 0; $c < $t; $c++) {
                 $d += $value[$c] * (($t + 1) - $c);
             }
@@ -116,10 +115,8 @@ class CitizenIdentification extends Rule
             if ($value[$c] != $d) {
                 return false;
             }
-
         }
 
         return true;
     }
-
 }

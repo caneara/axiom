@@ -32,5 +32,4 @@ class TelephoneNumber extends Rule
             'The :attribute must be a valid telephone number (7 - 15 digits in length)'
         );
     }
-
 }

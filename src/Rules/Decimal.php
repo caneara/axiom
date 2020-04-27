@@ -30,7 +30,8 @@ class Decimal extends Rule
     public function passes($attribute, $value) : bool
     {
         return preg_match(
-            "/^[0-9]{1,{$this->parameters[0]}}(\.[0-9]{1,{$this->parameters[1]}})$/", $value
+            "/^[0-9]{1,{$this->parameters[0]}}(\.[0-9]{1,{$this->parameters[1]}})$/",
+            $value
         ) > 0;
     }
 
@@ -47,5 +48,4 @@ class Decimal extends Rule
             'The :attribute must be an appropriately formatted decimal e.g. ' . $this->example()
         );
     }
-
 }

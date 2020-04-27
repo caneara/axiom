@@ -16,5 +16,4 @@ class UppercaseTest extends TestCase
         $this->assertFalse(validator(['text' => 'hello'], $rule)->passes());
         $this->assertTrue(validator(['text' => 'HELLO'], $rule)->passes());
     }
-
 }

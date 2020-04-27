@@ -62,7 +62,7 @@ class Iso6391Alpha3
         'FIN' => 'Finnish',
         'FRE' => 'French',
         'FRA' => 'French',
-        'GD'  => 'Gaelic, Scottish Gaelic',
+        'GD' => 'Gaelic, Scottish Gaelic',
         'GLA' => 'Gaelic, Scottish Gaelic',
         'GLG' => 'Galician',
         'GEO' => 'Georgian',
@@ -206,5 +206,4 @@ class Iso6391Alpha3
         'ZHA' => 'Zhuang, Chuang',
         'ZUL' => 'Zulu',
     ];
-
 }

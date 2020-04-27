@@ -29,5 +29,4 @@ class Uppercase extends Rule
             'The :attribute must be entirely uppercase text'
         );
     }
-
 }

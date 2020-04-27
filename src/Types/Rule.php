@@ -35,5 +35,4 @@ abstract class Rule implements BaseRule
     {
         return trans("validation.$key") === "validation.$key" ? $default : trans("validation.$key");
     }
-
 }

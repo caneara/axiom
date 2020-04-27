@@ -3,8 +3,8 @@
 namespace Axiom\Rules\Tests;
 
 use Axiom\Rules\Missing;
-use Orchestra\Testbench\TestCase;
 use Illuminate\Support\Facades\DB;
+use Orchestra\Testbench\TestCase;
 
 class MissingTest extends TestCase
 {
@@ -28,9 +28,9 @@ class MissingTest extends TestCase
 
         $app['config']->set('database.default', 'sqlite');
         $app['config']->set('database.connections.sqlite', [
-            'driver'                  => 'sqlite',
-            'database'                => ':memory:',
-            'prefix'                  => '',
+            'driver' => 'sqlite',
+            'database' => ':memory:',
+            'prefix' => '',
             'foreign_key_constraints' => true,
         ]);
     }
@@ -46,8 +46,8 @@ class MissingTest extends TestCase
         $this->loadMigrationsFrom(realpath(__DIR__ . '/..') . '/support/migrations');
 
         $this->user = DB::table('users')->insertGetId([
-            'name'     => 'John Doe',
-            'email'    => 'john@example.com',
+            'name' => 'John Doe',
+            'email' => 'john@example.com',
             'password' => bcrypt('password'),
         ]);
     }
@@ -64,5 +64,4 @@ class MissingTest extends TestCase
         $this->assertTrue(validator(['user_id' => 'non_existent_user'], $rule)->passes());
         $this->assertFalse(validator(['user_id' => $this->user], $rule)->passes());
     }
-
 }

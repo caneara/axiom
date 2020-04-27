@@ -13,7 +13,7 @@ class MaxWords extends Rule
      **/
     public function passes($attribute, $value) : bool
     {
-        return count(preg_split('~[^\p{L}\p{N}\']+~u',$value)) <= $this->parameters[0];
+        return count(preg_split('~[^\p{L}\p{N}\']+~u', $value)) <= $this->parameters[0];
     }
 
 
@@ -29,5 +29,4 @@ class MaxWords extends Rule
             'The :attribute cannot be longer than ' . $this->parameters[0] . ' words.'
         );
     }
-
 }

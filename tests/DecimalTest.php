@@ -33,5 +33,4 @@ class DecimalTest extends TestCase
 
         $this->assertTrue(validator(['figure' => $class->example()], $rule)->passes());
     }
-
 }

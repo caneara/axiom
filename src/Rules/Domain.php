@@ -29,5 +29,4 @@ class Domain extends Rule
             'The :attribute must be a valid domain without an http protocol e.g. google.com, www.google.com'
         );
     }
-
 }

@@ -260,5 +260,4 @@ class Iso3166Alpha3
         'ZMB' => 'Zambia',
         'ZWE' => 'Zimbabwe',
     ];
-
 }

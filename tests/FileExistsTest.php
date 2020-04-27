@@ -4,7 +4,6 @@ namespace Axiom\Rules\Tests;
 
 use Axiom\Rules\FileExists;
 use Orchestra\Testbench\TestCase;
-use Illuminate\Support\Facades\Storage;
 
 class FileExistsTest extends TestCase
 {
@@ -17,7 +16,7 @@ class FileExistsTest extends TestCase
     {
         $app['config']->set('filesystems.disks.local', [
             'driver' => 'local',
-            'root'   => realpath(__DIR__ . '/..') . '/support/assets',
+            'root' => realpath(__DIR__ . '/..') . '/support/assets',
         ]);
     }
 
@@ -33,5 +32,4 @@ class FileExistsTest extends TestCase
         $this->assertFalse(validator(['file' => '/fake.png'], $rule)->passes());
         $this->assertFalse(validator(['file' => 'fake.png'], $rule)->passes());
     }
-
 }

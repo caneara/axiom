@@ -38,5 +38,4 @@ class MonetaryFigureTest extends TestCase
 
         $this->assertTrue(validator(['deposit' => $class->example()], $rule)->passes());
     }
-
 }

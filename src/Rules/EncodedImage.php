@@ -3,8 +3,8 @@
 namespace Axiom\Rules;
 
 use Axiom\Types\Rule;
-use Illuminate\Support\Str;
 use Illuminate\Http\UploadedFile;
+use Illuminate\Support\Str;
 
 class EncodedImage extends Rule
 {
@@ -28,8 +28,12 @@ class EncodedImage extends Rule
         fwrite($this->file, base64_decode(Str::after($data, 'base64,')));
 
         return new UploadedFile(
-            stream_get_meta_data($this->file)['uri'], 'image',
-            'text/plain', null, true, true
+            stream_get_meta_data($this->file)['uri'],
+            'image',
+            'text/plain',
+            null,
+            true,
+            true
         );
     }
 
@@ -68,5 +72,4 @@ class EncodedImage extends Rule
             "The :attribute must be a valid {$this->parameters[0]} image"
         );
     }
-
 }

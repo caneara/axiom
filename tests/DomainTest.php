@@ -28,5 +28,4 @@ class DomainTest extends TestCase
         $this->assertTrue(validator(['domain' => 'google.com'], $rule)->passes());
         $this->assertTrue(validator(['domain' => 'www.google.com'], $rule)->passes());
     }
-
 }

@@ -2,8 +2,8 @@
 
 namespace Axiom\Rules;
 
-use Exception;
 use Axiom\Types\Rule;
+use Exception;
 use Illuminate\Support\Str;
 
 class DisposableEmail extends Rule
@@ -41,5 +41,4 @@ class DisposableEmail extends Rule
             'The :attribute must be a valid, non-disposable domain'
         );
     }
-
 }

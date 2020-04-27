@@ -2,8 +2,8 @@
 
 namespace Axiom\Rules\Tests;
 
-use Orchestra\Testbench\TestCase;
 use Axiom\Rules\CitizenIdentification;
+use Orchestra\Testbench\TestCase;
 
 class CitizenIdentificationTest extends TestCase
 {
@@ -83,5 +83,4 @@ class CitizenIdentificationTest extends TestCase
         $this->assertTrue(validator(['id' => '166.525.300-23'], $rule)->passes());
         $this->assertTrue(validator(['id' => '16652530023'], $rule)->passes());
     }
-
 }

@@ -23,5 +23,4 @@ class ISBNTest extends TestCase
         $this->assertTrue(validator(['book' => 'ISBN-10 0-596-52068-9'], $rule)->passes());
         $this->assertTrue(validator(['book' => '0-596-52068-9'], $rule)->passes());
     }
-
 }

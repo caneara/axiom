@@ -29,5 +29,4 @@ class MacAddress extends Rule
             'The :attribute must be a valid MAC address'
         );
     }
-
 }

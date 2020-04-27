@@ -19,5 +19,4 @@ class TitlecaseTest extends TestCase
         $this->assertTrue(validator(['text' => 'Hello World'], $rule)->passes());
         $this->assertTrue(validator(['text' => 'HELLO WORLD'], $rule)->passes());
     }
-
 }

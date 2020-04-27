@@ -16,5 +16,4 @@ class DisposableEmailTest extends TestCase
         $this->assertTrue(validator(['email' => 'john.doe@gmail.com'], $rule)->passes());
         $this->assertFalse(validator(['email' => 'john.doe@mailinator.com'], $rule)->passes());
     }
-
 }

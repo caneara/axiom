@@ -18,7 +18,8 @@ class StrongPassword extends Rule
     public function passes($attribute, $value) : bool
     {
         return preg_match(
-            '/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@()$%^&*=_{}[\]:;"\'|\\<>,.\/~`±§+-]).{12,30}$/', $value
+            '/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@()$%^&*=_{}[\]:;"\'|\\<>,.\/~`±§+-]).{12,30}$/',
+            $value
         ) > 0;
     }
 
@@ -35,5 +36,4 @@ class StrongPassword extends Rule
             'The :attribute must be 12–30 characters, and include a number, a symbol, a lower and a upper case letter'
         );
     }
-
 }

@@ -29,5 +29,4 @@ class WithoutWhitespace extends Rule
             'The :attribute must be an unbroken string of text, it cannot include spaces'
         );
     }
-
 }

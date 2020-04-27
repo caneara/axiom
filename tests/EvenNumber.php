@@ -18,5 +18,4 @@ class EvenNumberTest extends TestCase
         $this->assertFalse(validator(['number' => '3'], $rule)->passes());
         $this->assertTrue(validator(['number' => '4'], $rule)->passes());
     }
-
 }

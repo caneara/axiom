@@ -3,8 +3,8 @@
 namespace Axiom\Rules;
 
 use Axiom\Types\Rule;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class RecordOwner extends Rule
 {
@@ -38,5 +38,4 @@ class RecordOwner extends Rule
             'You do not have permission to interact with this resource'
         );
     }
-
 }

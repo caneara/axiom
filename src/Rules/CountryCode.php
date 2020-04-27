@@ -2,9 +2,9 @@
 
 namespace Axiom\Rules;
 
-use Axiom\Types\Rule;
 use Axiom\Support\Iso3166Alpha2;
 use Axiom\Support\Iso3166Alpha3;
+use Axiom\Types\Rule;
 
 class CountryCode extends Rule
 {
@@ -33,5 +33,4 @@ class CountryCode extends Rule
             'The :attribute must be a valid ISO 3166-1 alpha-' . ($this->parameters[0] ?? 2) . ' country code'
         );
     }
-
 }

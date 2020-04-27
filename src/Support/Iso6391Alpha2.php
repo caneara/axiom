@@ -195,5 +195,4 @@ class Iso6391Alpha2
         'ZA' => 'Zhuang, Chuang',
         'ZU' => 'Zulu',
     ];
-
 }

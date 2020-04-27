@@ -21,5 +21,4 @@ class TelephoneNumberTest extends TestCase
         $this->assertFalse(validator(['phone' => '1234567890123456'], $rule)->passes());
         $this->assertTrue(validator(['phone' => '123456789'], $rule)->passes());
     }
-
 }

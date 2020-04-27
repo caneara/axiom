@@ -29,5 +29,4 @@ class EvenNumber extends Rule
             'The :attribute must be an even number'
         );
     }
-
 }

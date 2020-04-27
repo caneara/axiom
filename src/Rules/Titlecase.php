@@ -29,5 +29,4 @@ class Titlecase extends Rule
             'Each word in :attribute must begin with a capital letter'
         );
     }
-
 }

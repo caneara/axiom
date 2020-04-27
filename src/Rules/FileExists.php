@@ -37,5 +37,4 @@ class FileExists extends Rule
             'The file specified for :attribute does not exist'
         );
     }
-
 }

@@ -18,5 +18,4 @@ class OddNumberTest extends TestCase
         $this->assertFalse(validator(['number' => '2'], $rule)->passes());
         $this->assertTrue(validator(['number' => '3'], $rule)->passes());
     }
-
 }

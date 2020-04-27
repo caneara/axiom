@@ -3,9 +3,9 @@
 namespace Axiom\Rules\Tests;
 
 use Axiom\Rules\RecordOwner;
-use Orchestra\Testbench\TestCase;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
+use Orchestra\Testbench\TestCase;
 
 class RecordOwnerTest extends TestCase
 {
@@ -45,9 +45,9 @@ class RecordOwnerTest extends TestCase
 
         $app['config']->set('database.default', 'sqlite');
         $app['config']->set('database.connections.sqlite', [
-            'driver'                  => 'sqlite',
-            'database'                => ':memory:',
-            'prefix'                  => '',
+            'driver' => 'sqlite',
+            'database' => ':memory:',
+            'prefix' => '',
             'foreign_key_constraints' => true,
         ]);
     }
@@ -63,19 +63,19 @@ class RecordOwnerTest extends TestCase
         $this->loadMigrationsFrom(realpath(__DIR__ . '/..') . '/support/migrations');
 
         $this->owner = DB::table('users')->insertGetId([
-            'name'     => 'John Doe',
-            'email'    => 'john@example.com',
+            'name' => 'John Doe',
+            'email' => 'john@example.com',
             'password' => bcrypt('password'),
         ]);
 
         $this->other = DB::table('users')->insertGetId([
-            'name'     => 'Jane Doe',
-            'email'    => 'jane@example.com',
+            'name' => 'Jane Doe',
+            'email' => 'jane@example.com',
             'password' => bcrypt('password'),
         ]);
 
         $this->post = DB::table('posts')->insertGetId([
-            'title'   => 'Post #1',
+            'title' => 'Post #1',
             'user_id' => $this->owner,
         ]);
     }
@@ -97,5 +97,4 @@ class RecordOwnerTest extends TestCase
         Auth::loginUsingId($this->owner);
         $this->assertTrue(validator(['post_id' => $this->post], $rule)->passes());
     }
-
 }

@@ -36,5 +36,4 @@ class Missing extends Rule
             'The :attribute already exists'
         );
     }
-
 }

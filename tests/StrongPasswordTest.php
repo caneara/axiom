@@ -20,5 +20,4 @@ class StrongPasswordTest extends TestCase
         $this->assertFalse(validator(['password' => 'Ertbyrt123#'], $rule)->passes());
         $this->assertTrue(validator(['password' => 'Ertbyrt1234#'], $rule)->passes());
     }
-
 }

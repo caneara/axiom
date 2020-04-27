@@ -37,7 +37,7 @@ class EncodedImageTest extends TestCase
     /** @test */
     public function the_encoded_jpeg_image_rule_can_be_validated()
     {
-        $png_rule  = ['image' => [new EncodedImage('png')]];
+        $png_rule = ['image' => [new EncodedImage('png')]];
         $jpeg_rule = ['image' => [new EncodedImage('jpeg')]];
 
         $this->assertFalse(validator(['image' => $this->getFile('image.jpeg')], $png_rule)->passes());
@@ -48,5 +48,4 @@ class EncodedImageTest extends TestCase
         $this->assertFalse(validator(['image' => $this->invalidImage('image.png')], $jpeg_rule)->passes());
         $this->assertFalse(validator(['image' => $this->invalidImage()], $jpeg_rule)->passes());
     }
-
 }

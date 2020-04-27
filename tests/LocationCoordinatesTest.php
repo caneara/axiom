@@ -2,8 +2,8 @@
 
 namespace Axiom\Rules\Tests;
 
-use Orchestra\Testbench\TestCase;
 use Axiom\Rules\LocationCoordinates;
+use Orchestra\Testbench\TestCase;
 
 class LocationCoordinatesTest extends TestCase
 {
@@ -25,5 +25,4 @@ class LocationCoordinatesTest extends TestCase
         $this->assertFalse(validator(['location' => '-77.036433576, 38.8951555'], $rule)->passes());
         $this->assertFalse(validator(['location' => '-77.0364335, 38.895155576'], $rule)->passes());
     }
-
 }

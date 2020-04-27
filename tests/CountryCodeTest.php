@@ -31,5 +31,4 @@ class CountryCodeTest extends TestCase
         $this->assertTrue(validator(['code' => 'FRA'], $rule)->passes());
         $this->assertFalse(validator(['code' => 'xxx'], $rule)->passes());
     }
-
 }

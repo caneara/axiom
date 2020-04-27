@@ -29,5 +29,4 @@ class OddNumber extends Rule
             'The :attribute must be an odd number'
         );
     }
-
 }

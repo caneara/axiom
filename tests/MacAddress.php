@@ -17,5 +17,4 @@ class MacAddressTest extends TestCase
         $this->assertTrue(validator(['address' => '3D-F2-C9-A6-B3-4F'], $rule)->passes());
         $this->assertFalse(validator(['address' => '00:00:00:00:00:00:00'], $rule)->passes());
     }
-
 }

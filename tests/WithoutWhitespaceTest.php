@@ -2,8 +2,8 @@
 
 namespace Axiom\Rules\Tests;
 
-use Orchestra\Testbench\TestCase;
 use Axiom\Rules\WithoutWhitespace;
+use Orchestra\Testbench\TestCase;
 
 class WithoutWhitespaceTest extends TestCase
 {
@@ -18,5 +18,4 @@ class WithoutWhitespaceTest extends TestCase
         $this->assertFalse(validator(['text' => 'hello world'], $rule)->passes());
         $this->assertTrue(validator(['text' => 'hello'], $rule)->passes());
     }
-
 }

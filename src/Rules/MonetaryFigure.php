@@ -32,7 +32,8 @@ class MonetaryFigure extends Rule
     public function passes($attribute, $value) : bool
     {
         return preg_match(
-            "/^\\{$this->parameters[0]}[0-9]{1,{$this->parameters[1]}}(\.[0-9]{1,{$this->parameters[2]}})?$/", $value
+            "/^\\{$this->parameters[0]}[0-9]{1,{$this->parameters[1]}}(\.[0-9]{1,{$this->parameters[2]}})?$/",
+            $value
         ) > 0;
     }
 
@@ -49,5 +50,4 @@ class MonetaryFigure extends Rule
             'The :attribute must be a monetary figure e.g. ' . $this->example()
         );
     }
-
 }

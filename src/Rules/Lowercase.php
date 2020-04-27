@@ -29,5 +29,4 @@ class Lowercase extends Rule
             'The :attribute must be entirely lowercase text'
         );
     }
-
 }
