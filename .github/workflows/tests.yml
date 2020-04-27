@@ -1,6 +1,6 @@
 # Credit to spatie.be - you guys are legends!
 
-name: run-tests
+name: build
 
 on: [push, pull_request]
 
