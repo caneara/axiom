@@ -2,8 +2,8 @@
 
 namespace Axiom\Rules\Tests;
 
-use Axiom\Rules\LocationCoordinates;
 use Orchestra\Testbench\TestCase;
+use Axiom\Rules\LocationCoordinates;
 
 class LocationCoordinatesTest extends TestCase
 {

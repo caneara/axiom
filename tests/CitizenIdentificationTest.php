@@ -2,8 +2,8 @@
 
 namespace Axiom\Rules\Tests;
 
-use Axiom\Rules\CitizenIdentification;
 use Orchestra\Testbench\TestCase;
+use Axiom\Rules\CitizenIdentification;
 
 class CitizenIdentificationTest extends TestCase
 {

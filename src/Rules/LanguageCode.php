@@ -2,9 +2,9 @@
 
 namespace Axiom\Rules;
 
+use Axiom\Types\Rule;
 use Axiom\Support\Iso6391Alpha2;
 use Axiom\Support\Iso6391Alpha3;
-use Axiom\Types\Rule;
 
 class LanguageCode extends Rule
 {

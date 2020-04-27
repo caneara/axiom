@@ -2,8 +2,8 @@
 
 namespace Axiom\Rules;
 
-use Axiom\Types\Rule;
 use Exception;
+use Axiom\Types\Rule;
 use Illuminate\Support\Str;
 
 class DisposableEmail extends Rule

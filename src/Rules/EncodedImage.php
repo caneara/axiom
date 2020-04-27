@@ -3,8 +3,8 @@
 namespace Axiom\Rules;
 
 use Axiom\Types\Rule;
-use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Str;
+use Illuminate\Http\UploadedFile;
 
 class EncodedImage extends Rule
 {

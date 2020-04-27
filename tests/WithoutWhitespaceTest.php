@@ -2,8 +2,8 @@
 
 namespace Axiom\Rules\Tests;
 
-use Axiom\Rules\WithoutWhitespace;
 use Orchestra\Testbench\TestCase;
+use Axiom\Rules\WithoutWhitespace;
 
 class WithoutWhitespaceTest extends TestCase
 {

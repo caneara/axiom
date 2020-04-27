@@ -16,7 +16,7 @@ class FileExistsTest extends TestCase
     {
         $app['config']->set('filesystems.disks.local', [
             'driver' => 'local',
-            'root' => realpath(__DIR__ . '/..') . '/support/assets',
+            'root'   => realpath(__DIR__ . '/..') . '/support/assets',
         ]);
     }
 

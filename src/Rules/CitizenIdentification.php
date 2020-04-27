@@ -2,9 +2,9 @@
 
 namespace Axiom\Rules;
 
+use Axiom\Types\Rule;
 use Axiom\Support\Iso3166Alpha2;
 use Axiom\Support\Iso3166Alpha3;
-use Axiom\Types\Rule;
 
 class CitizenIdentification extends Rule
 {
