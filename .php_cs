@@ -15,13 +15,16 @@ return PhpCsFixer\Config::create()
     ->setRules([
         '@PSR2' => true,
         'array_syntax' => ['syntax' => 'short'],
-        'ordered_imports' => ['sortAlgorithm' => 'alpha'],
+        'ordered_imports' => ['sort_algorithm' => 'length'],
         'no_unused_imports' => true,
         'not_operator_with_successor_space' => true,
         'trailing_comma_in_multiline_array' => true,
         'phpdoc_scalar' => true,
         'unary_operator_spaces' => true,
-        'binary_operator_spaces' => true,
+        'binary_operator_spaces' => [
+            'align_double_arrow' => true,
+            'align_equals' => true,
+        ],
         'blank_line_before_statement' => [
             'statements' => ['break', 'continue', 'declare', 'return', 'throw', 'try'],
         ],
