@@ -1,3 +1,4 @@
+# Credit to spatie.be - you guys are legends!
 name: styling
 
 on: [push, pull_request]
