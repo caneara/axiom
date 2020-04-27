@@ -1,5 +1,4 @@
 # Credit to spatie.be - you guys are legends!
-
 name: build
 
 on: [push, pull_request]
