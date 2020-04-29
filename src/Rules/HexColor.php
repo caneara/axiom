@@ -9,7 +9,6 @@ class HexColor extends Rule
     /**
      * Hex color regex formats.
      *
-     * @var array
      */
     private array $formats = [
         4 => '/^#([a-fA-F0-9]{3})$/i',
@@ -21,7 +20,6 @@ class HexColor extends Rule
      * Determines if the rule passes.
      *
      * @param string $attribute
-     * @param mixed $value
      *
      * @return bool
      */
