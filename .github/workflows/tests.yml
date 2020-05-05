@@ -1,10 +1,9 @@
-# Credit to spatie.be - you guys are legends!
 name: tests
 
 on: [push, pull_request]
 
 jobs:
-  test:
+  phpunit:
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: true
@@ -23,7 +22,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Cache dependencies
+      - name: Cache composer dependencies
         uses: actions/cache@v1
         with:
           path: ~/.composer/cache/files
@@ -36,10 +35,10 @@ jobs:
           extensions: dom, curl, libxml, mbstring, zip, pcntl, pdo, sqlite, pdo_sqlite, bcmath, soap, intl, gd, exif, iconv, imagick
           coverage: none
 
-      - name: Install dependencies
+      - name: Run composer
         run: |
           composer require "laravel/framework:${{ matrix.laravel }}" "orchestra/testbench:${{ matrix.testbench }}" --no-interaction --no-update
           composer update --${{ matrix.dependency-version }} --prefer-dist --no-interaction --no-suggest
 
-      - name: Execute tests
+      - name: Run tests
         run: vendor/bin/phpunit

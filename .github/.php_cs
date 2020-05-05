@@ -5,7 +5,7 @@ $finder = Symfony\Component\Finder\Finder::create()
     ->notPath('storage/*')
     ->notPath('storage/*')
     ->notPath('resources/view/mail/*')
-    ->in([__DIR__ . '/src', __DIR__ . '/tests'])
+    ->in([__DIR__ . '/../src', __DIR__ . '/../tests'])
     ->name('*.php')
     ->notName('*.blade.php')
     ->ignoreDotFiles(true)
@@ -35,5 +35,8 @@ return PhpCsFixer\Config::create()
             'keep_multiple_spaces_after_comma' => true,
         ],
         'no_superfluous_phpdoc_tags' => true,
+        'function_declaration' => [
+            'closure_function_spacing' => 'none',
+        ],
     ])
     ->setFinder($finder);
