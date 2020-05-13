@@ -49,13 +49,14 @@ class EncodedImage extends Rule
     public function passes($attribute, $value) : bool
     {
         $valid_mime = false;
-        foreach($this->parameters as $mime ) {
+        foreach ($this->parameters as $mime) {
             if (Str::startsWith($value, "data:image/$mime;base64,")) {
                 $valid_mime = true;
+
                 break;
             }
         }
-        if($valid_mime) {
+        if ($valid_mime) {
             $result = validator(['file' => $this->createTemporaryFile($value)], ['file' => 'image'])->passes();
 
             fclose($this->file);
@@ -74,7 +75,8 @@ class EncodedImage extends Rule
      **/
     public function message() : string
     {
-        $mimes = implode(',',$this->parameters);
+        $mimes = implode(',', $this->parameters);
+
         return $this->getLocalizedErrorMessage(
             'encoded_image',
             "The :attribute must be a valid {$mimes} image"
