@@ -74,7 +74,7 @@ The following validation rules are currently available:
 | DisposableEmail       | validation.disposable_email       | Requires the presence of an email address which is not disposable                                                     |
 | Missing               | validation.missing                | Requires that the given value is not present in a given database table / column - see class for details               |
 | Decimal               | validation.decimal                | Requires that the given value is a decimal with an appropriate format - see class for details                         |
-| EncodedImage          | validation.encoded_image          | Requires that the given value is a base64-encoded image of a given mime type - see class for details                  |
+| EncodedImage          | validation.encoded_image          | Requires that the given value is a base64-encoded image of a given mime types - see class for details                  |
 | LocationCoordinates   | validation.location_coordinates   | Requires that the given value is a comma-separated set of latitude and longitude coordinates                          |
 | FileExists            | validation.file_exists            | Requires that the given value is a path to an existing file - see class for details                                   |
 | MacAddress            | validation.mac_address            | Requires that the given value is a valid MAC address                                                                  |
