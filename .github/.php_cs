@@ -34,6 +34,8 @@ return PhpCsFixer\Config::create()
             'on_multiline' => 'ensure_fully_multiline',
             'keep_multiple_spaces_after_comma' => true,
         ],
+        'method_chaining_indentation' => true,
+        'object_operator_without_whitespace' => true,
         'no_superfluous_phpdoc_tags' => true,
         'function_declaration' => [
             'closure_function_spacing' => 'none',

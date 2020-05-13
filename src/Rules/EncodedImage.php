@@ -42,13 +42,15 @@ class EncodedImage extends Rule
     /**
      * Determine if the validation rule passes.
      *
-     * The rule requires a single parameter, which is
+     * The rule requires at least a single parameter, which is
      * the expected mime types of the file e.g. png, jpeg etc.
+     * You can also supply multiple mime types as an array.
      *
      **/
     public function passes($attribute, $value) : bool
     {
         $valid_mime = false;
+
         foreach ($this->parameters as $mime) {
             if (Str::startsWith($value, "data:image/$mime;base64,")) {
                 $valid_mime = true;
@@ -56,6 +58,7 @@ class EncodedImage extends Rule
                 break;
             }
         }
+
         if ($valid_mime) {
             $result = validator(['file' => $this->createTemporaryFile($value)], ['file' => 'image'])->passes();
 
@@ -75,11 +78,20 @@ class EncodedImage extends Rule
      **/
     public function message() : string
     {
-        $mimes = implode(',', $this->parameters);
+        $mimes = $this->parameters;
+
+        if (count($mimes) === 1) {
+            return $this->getLocalizedErrorMessage(
+                'encoded_image',
+                'The :attribute must be a valid ' . $mimes[0] . ' image'
+            );
+        }
+
+        $mimes[count($mimes) - 1] = 'or ' . $mimes[count($mimes) - 1];
 
         return $this->getLocalizedErrorMessage(
             'encoded_image',
-            "The :attribute must be a valid {$mimes} image"
+            'The :attribute must be a valid ' . implode(', ', $mimes) . ' image'
         );
     }
 }
