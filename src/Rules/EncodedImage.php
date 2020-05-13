@@ -43,20 +43,27 @@ class EncodedImage extends Rule
      * Determine if the validation rule passes.
      *
      * The rule requires a single parameter, which is
-     * the expected mime type of the file e.g. png, jpeg etc.
+     * the expected mime types of the file e.g. png, jpeg etc.
      *
      **/
     public function passes($attribute, $value) : bool
     {
-        if (! Str::startsWith($value, "data:image/{$this->parameters[0]};base64,")) {
-            return false;
+        $valid_mime = false;
+        foreach($this->parameters as $mime ) {
+            if (Str::startsWith($value, "data:image/$mime;base64,")) {
+                $valid_mime = true;
+                break;
+            }
+        }
+        if($valid_mime) {
+            $result = validator(['file' => $this->createTemporaryFile($value)], ['file' => 'image'])->passes();
+
+            fclose($this->file);
+
+            return $result;
         }
 
-        $result = validator(['file' => $this->createTemporaryFile($value)], ['file' => 'image'])->passes();
-
-        fclose($this->file);
-
-        return $result;
+        return false;
     }
 
 
@@ -67,9 +74,10 @@ class EncodedImage extends Rule
      **/
     public function message() : string
     {
+        $mimes = implode(',',$this->parameters);
         return $this->getLocalizedErrorMessage(
             'encoded_image',
-            "The :attribute must be a valid {$this->parameters[0]} image"
+            "The :attribute must be a valid {$mimes} image"
         );
     }
 }
