@@ -20,9 +20,9 @@ class RecordOwner extends Rule
     public function passes($attribute, $value) : bool
     {
         return DB::table($this->parameters[0])
-                 ->where($this->parameters[1], $value)
-                 ->where('user_id', Auth::id())
-                 ->exists();
+            ->where($this->parameters[1], $value)
+            ->where('user_id', Auth::id())
+            ->exists();
     }
 
 

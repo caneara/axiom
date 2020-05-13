@@ -19,8 +19,8 @@ class Missing extends Rule
     public function passes($attribute, $value) : bool
     {
         return DB::table($this->parameters[0])
-                 ->where($this->parameters[1], $value)
-                 ->doesntExist();
+            ->where($this->parameters[1], $value)
+            ->doesntExist();
     }
 
 
