@@ -37,6 +37,8 @@ class CitizenIdentification extends Rule
             case 'BR':
             case 'BRA':
                 return $this->verifyBrazil($value);
+            
+            case 'VI':
             case 'VN':
                 return $this->verifyVietnam($value);
 
