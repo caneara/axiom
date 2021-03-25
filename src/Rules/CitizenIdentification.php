@@ -136,6 +136,6 @@ class CitizenIdentification extends Rule
         $maxNumGender = 1 + ($century - 20) * 2; //ex: century: 21, male: 2, female: 3. max: century: 25, male: 8, female: 9
         $numBirth = '\d{2}'; // last 2 number of birth year
         $numRand = '\d{6}'; // 6 random number
-        return preg_match('/^'.$state.'['.$minNumGender.'-'.$maxNumGender.']'.$numBirth.$numRand.'$/', $value);
+        return preg_match('/^'.$state.'['.$minNumGender.'-'.$maxNumGender.']'.$numBirth.$numRand.'$/', $value) > 0;
     }
 }
