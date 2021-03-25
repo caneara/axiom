@@ -130,7 +130,7 @@ class CitizenIdentification extends Rule
     protected function verifyVietnam($value) : bool
     {
         $state = '0\d{2}'; // state code
-        $century = ceil($year / 100); // current century
+        $century = ceil(date('Y') / 100); // current century
         $minNumGender = 0; //century: 20, male: 0, female: 1
         // 20: begin century
         $maxNumGender = 1 + ($century - 20) * 2; //ex: century: 21, male: 2, female: 3. max: century: 25, male: 8, female: 9
