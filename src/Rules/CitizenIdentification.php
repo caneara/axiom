@@ -129,13 +129,14 @@ class CitizenIdentification extends Rule
      **/
     protected function verifyVietnam($value) : bool
     {
-        $state = '0\d{2}'; // state code
-        $century = ceil(date('Y') / 100); // current century
+        $state        = '0\d{2}'; // state code
+        $century      = ceil(date('Y') / 100); // current century
         $minNumGender = 0; //century: 20, male: 0, female: 1
         // 20: begin century
         $maxNumGender = 1 + ($century - 20) * 2; //ex: century: 21, male: 2, female: 3. max: century: 25, male: 8, female: 9
-        $numBirth = '\d{2}'; // last 2 number of birth year
-        $numRand = '\d{6}'; // 6 random number
+        $numBirth     = '\d{2}'; // last 2 number of birth year
+        $numRand      = '\d{6}'; // 6 random number
+
         return preg_match('/^'.$state.'['.$minNumGender.'-'.$maxNumGender.']'.$numBirth.$numRand.'$/', $value) > 0;
     }
 }
