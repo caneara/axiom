@@ -85,7 +85,7 @@ The following validation rules are currently available:
 | Uppercase             | validation.uppercase              | Requires that the given value is a upper case string                                                                  |
 | Titlecase             | validation.titlecase              | Requires that the given value is a title case string                                                                  |
 | Domain                | validation.domain                 | Requires that the given value be a domain e.g. google.com, www.google.com                                             |
-| CitizenIdentification | validation.citizen_identification | Requires that the given value be a citizen identification number of USA, UK, France or Brazil (see class for details) |
+| CitizenIdentification | validation.citizen_identification | Requires that the given value be a citizen identification number of USA, UK, France, Brazil or Vietnam (see class for details) |
 | WithoutWhitespace     | validation.without_whitespace     | Requires that the given value not include any whitespace characters                                                   |
 | MaxWords              | validation.max_words              | Requires that the given value cannot contain more words than specified                                                |
 | HexColor              | validation.hex_color              | Requires that the given value is a valid hex color eg. #fff, #0f0f0f, #00ff0080                                       |
