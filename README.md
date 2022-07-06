@@ -45,7 +45,7 @@ I made [Lumeno](https://lumeno.dev) to help you centralize your IT résumé, pro
 <!-- Screenshot -->
 <p align="center">
     <a target="_blank" href="https://lumeno.dev">
-        <img src="resources/promotion.png" alt="Lumeno" style="height:350px">
+        <img src="resources/promotion.png" alt="Lumeno" style="max-height:350px">
     </a>
 </p>
 
