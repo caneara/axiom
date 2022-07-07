@@ -6,7 +6,6 @@ use Axiom\Types\Rule;
 
 class TelephoneNumber extends Rule
 {
-
     /**
      * Determine if the validation rule passes.
      *
@@ -18,8 +17,6 @@ class TelephoneNumber extends Rule
     {
         return preg_match('/^[0-9]{7,15}$/', $value) > 0;
     }
-
-
 
     /**
      * Get the validation error message.

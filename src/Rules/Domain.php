@@ -6,7 +6,6 @@ use Axiom\Types\Rule;
 
 class Domain extends Rule
 {
-
     /**
      * Determine if the validation rule passes.
      *
@@ -15,8 +14,6 @@ class Domain extends Rule
     {
         return preg_match('/^([\w-]+\.)*[\w\-]+\.\w{2,10}$/', $value) > 0;
     }
-
-
 
     /**
      * Get the validation error message.

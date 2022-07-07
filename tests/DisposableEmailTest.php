@@ -7,7 +7,6 @@ use Orchestra\Testbench\TestCase;
 
 class DisposableEmailTest extends TestCase
 {
-
     /** @test */
     public function the_disposable_email_rule_can_be_validated()
     {

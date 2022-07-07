@@ -7,7 +7,6 @@ use Orchestra\Testbench\TestCase;
 
 class EncodedImageTest extends TestCase
 {
-
     /**
      * Retrieve the contents of a given file.
      *
@@ -21,8 +20,6 @@ class EncodedImageTest extends TestCase
         return "data:image/{$extension};base64," . base64_encode(file_get_contents($path));
     }
 
-
-
     /**
      * Generate an invalid image file with a given mime type.
      *
@@ -31,8 +28,6 @@ class EncodedImageTest extends TestCase
     {
         return "data:image/{$mime};base64," . base64_encode('not an image file');
     }
-
-
 
     /** @test */
     public function the_encoded_jpeg_image_rule_can_be_validated()

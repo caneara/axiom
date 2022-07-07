@@ -6,7 +6,6 @@ use Axiom\Types\Rule;
 
 class ISBN extends Rule
 {
-
     /**
      * Determine if the validation rule passes.
      *
@@ -18,8 +17,6 @@ class ISBN extends Rule
             $value
         ) > 0;
     }
-
-
 
     /**
      * Get the validation error message.

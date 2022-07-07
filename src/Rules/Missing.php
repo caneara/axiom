@@ -7,7 +7,6 @@ use Illuminate\Support\Facades\DB;
 
 class Missing extends Rule
 {
-
     /**
      * Determine if the validation rule passes.
      *
@@ -22,8 +21,6 @@ class Missing extends Rule
             ->where($this->parameters[1], $value)
             ->doesntExist();
     }
-
-
 
     /**
      * Get the validation error message.

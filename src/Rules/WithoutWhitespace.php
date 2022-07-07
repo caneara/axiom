@@ -6,7 +6,6 @@ use Axiom\Types\Rule;
 
 class WithoutWhitespace extends Rule
 {
-
     /**
      * Determine if the validation rule passes.
      *
@@ -15,8 +14,6 @@ class WithoutWhitespace extends Rule
     {
         return preg_match('/\s/', $value) === 0;
     }
-
-
 
     /**
      * Get the validation error message.

@@ -7,7 +7,6 @@ use Orchestra\Testbench\TestCase;
 
 class DomainTest extends TestCase
 {
-
     /** @test */
     public function the_domain_rule_can_be_validated()
     {

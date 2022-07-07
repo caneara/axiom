@@ -7,7 +7,6 @@ use Orchestra\Testbench\TestCase;
 
 class CountryCodeTest extends TestCase
 {
-
     /** @test */
     public function the_two_letter_country_code_rule_can_be_validated()
     {
@@ -18,8 +17,6 @@ class CountryCodeTest extends TestCase
         $this->assertTrue(validator(['code' => 'FR'], $rule)->passes());
         $this->assertFalse(validator(['code' => 'xx'], $rule)->passes());
     }
-
-
 
     /** @test */
     public function the_three_letter_country_code_rule_can_be_validated()

@@ -6,7 +6,6 @@ use Axiom\Types\Rule;
 
 class Lowercase extends Rule
 {
-
     /**
      * Determine if the validation rule passes.
      *
@@ -15,8 +14,6 @@ class Lowercase extends Rule
     {
         return mb_strtolower($value) === $value;
     }
-
-
 
     /**
      * Get the validation error message.

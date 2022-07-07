@@ -7,7 +7,6 @@ use Orchestra\Testbench\TestCase;
 
 class MonetaryFigureTest extends TestCase
 {
-
     /** @test */
     public function the_monetary_figure_rule_can_be_validated()
     {
@@ -28,8 +27,6 @@ class MonetaryFigureTest extends TestCase
         $this->assertFalse(validator(['deposit' => '$abcd.efgh'], $rule)->passes());
         $this->assertFalse(validator(['deposit' => '£1234.1234'], $rule)->passes());
     }
-
-
 
     /** @test */
     public function the_monetary_figure_rule_example_is_valid()

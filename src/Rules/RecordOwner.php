@@ -8,7 +8,6 @@ use Illuminate\Support\Facades\Auth;
 
 class RecordOwner extends Rule
 {
-
     /**
      * Determine if the validation rule passes.
      *
@@ -24,8 +23,6 @@ class RecordOwner extends Rule
             ->where('user_id', Auth::id())
             ->exists();
     }
-
-
 
     /**
      * Get the validation error message.

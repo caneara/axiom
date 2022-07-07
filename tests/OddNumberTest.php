@@ -7,7 +7,6 @@ use Orchestra\Testbench\TestCase;
 
 class OddNumberTest extends TestCase
 {
-
     /** @test */
     public function the_odd_number_rule_can_be_validated()
     {

@@ -7,7 +7,6 @@ use Orchestra\Testbench\TestCase;
 
 class TelephoneNumberTest extends TestCase
 {
-
     /** @test */
     public function the_telephone_number_rule_can_be_validated()
     {

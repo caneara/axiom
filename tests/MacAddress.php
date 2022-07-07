@@ -7,7 +7,6 @@ use Orchestra\Testbench\TestCase;
 
 class MacAddressTest extends TestCase
 {
-
     /** @test */
     public function the_mac_address_rule_can_be_validated()
     {

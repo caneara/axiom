@@ -6,14 +6,11 @@ use Illuminate\Contracts\Validation\Rule as BaseRule;
 
 abstract class Rule implements BaseRule
 {
-
     /**
      * Array of supporting parameters.
      *
      **/
     protected array $parameters;
-
-
 
     /**
      * Constructor.
@@ -23,8 +20,6 @@ abstract class Rule implements BaseRule
     {
         $this->parameters = func_get_args();
     }
-
-
 
     /**
      * Retrieve the appropriate, localized validation message

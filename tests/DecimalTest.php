@@ -7,7 +7,6 @@ use Orchestra\Testbench\TestCase;
 
 class DecimalTest extends TestCase
 {
-
     /** @test */
     public function the_decimal_rule_can_be_validated()
     {
@@ -23,8 +22,6 @@ class DecimalTest extends TestCase
         $this->assertTrue(validator(['figure' => '1234.0'], $rule)->passes());
         $this->assertTrue(validator(['figure' => '1234.00'], $rule)->passes());
     }
-
-
 
     /** @test */
     public function the_decimal_rule_example_is_valid()

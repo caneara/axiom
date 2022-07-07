@@ -8,14 +8,11 @@ use Illuminate\Http\UploadedFile;
 
 class EncodedImage extends Rule
 {
-
     /**
      * Pointer to the temporary file.
      *
      **/
     protected $file;
-
-
 
     /**
      * Write the given data to a temporary file.
@@ -36,8 +33,6 @@ class EncodedImage extends Rule
             true
         );
     }
-
-
 
     /**
      * Determine if the validation rule passes.
@@ -69,8 +64,6 @@ class EncodedImage extends Rule
 
         return false;
     }
-
-
 
     /**
      * Get the validation error message.

@@ -4,7 +4,6 @@ namespace Axiom\Support;
 
 class Iso3166Alpha3
 {
-
     /**
      * Array of countries with their ISO 3166-1 alpha-3 codes.
      *

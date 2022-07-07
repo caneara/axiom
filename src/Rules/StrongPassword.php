@@ -6,7 +6,6 @@ use Axiom\Types\Rule;
 
 class StrongPassword extends Rule
 {
-
     /**
      * Determine if the validation rule passes.
      *
@@ -22,8 +21,6 @@ class StrongPassword extends Rule
             $value
         ) > 0;
     }
-
-
 
     /**
      * Get the validation error message.

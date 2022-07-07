@@ -7,7 +7,6 @@ use Orchestra\Testbench\TestCase;
 
 class MaxWordsTest extends TestCase
 {
-
     /**
      * @test
      * @dataProvider provideSentences
@@ -17,8 +16,6 @@ class MaxWordsTest extends TestCase
         $rule = ['text' => [new MaxWords($data['max_words'])]];
         $this->assertEquals($data['passes'], validator(['text' => $data['text']], $rule)->passes());
     }
-
-
 
     /**
      * Retrieve the seed data for the test.

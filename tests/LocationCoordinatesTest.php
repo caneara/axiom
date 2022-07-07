@@ -7,7 +7,6 @@ use Axiom\Rules\LocationCoordinates;
 
 class LocationCoordinatesTest extends TestCase
 {
-
     /** @test */
     public function the_location_coordinates_rule_can_be_validated()
     {

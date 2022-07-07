@@ -8,7 +8,6 @@ use Axiom\Support\Iso3166Alpha3;
 
 class CitizenIdentification extends Rule
 {
-
     /**
      * Determine if the validation rule passes.
      *
@@ -48,8 +47,6 @@ class CitizenIdentification extends Rule
         }
     }
 
-
-
     /**
      * Get the validation error message.
      *
@@ -62,8 +59,6 @@ class CitizenIdentification extends Rule
         );
     }
 
-
-
     /**
      * Verify whether the given value is a valid French citizen number.
      *
@@ -72,8 +67,6 @@ class CitizenIdentification extends Rule
     {
         return preg_match('/^[1,2][ ]?[0-9]{2}[ ]?[0,1,2,3,5][0-9][ ]?[0-9A-Z]{5}[ ]?[0-9]{3}[ ]?[0-9]{2}$/', $value) > 0;
     }
-
-
 
     /**
      * Verify whether the given value is a valid United Kingdom citizen number.
@@ -84,8 +77,6 @@ class CitizenIdentification extends Rule
         return preg_match('/^[A-CEGHJ-PR-TW-Z]{1}[A-CEGHJ-NPR-TW-Z]{1}[0-9]{6}[A-DFM]{0,1}$/', $value) > 0;
     }
 
-
-
     /**
      * Verify whether the given value is a valid United States citizen number.
      *
@@ -94,8 +85,6 @@ class CitizenIdentification extends Rule
     {
         return preg_match('/^(?!000|666)[0-8][0-9]{2}-(?!00)[0-9]{2}-(?!0000)[0-9]{4}$/', $value) > 0;
     }
-
-
 
     /**
      * Verify whether the given value is a valid Brazil citizen number.
@@ -123,6 +112,7 @@ class CitizenIdentification extends Rule
 
         return true;
     }
+
     /**
      * Verify whether the given value is a valid Vietnam citizen number.
      *

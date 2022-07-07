@@ -6,7 +6,6 @@ use Axiom\Types\Rule;
 
 class Decimal extends Rule
 {
-
     /**
      * Generate an example value that satisifies the validation rule.
      *
@@ -16,8 +15,6 @@ class Decimal extends Rule
         return mt_rand(1, (int) str_repeat('9', $this->parameters[0])) . '.' .
                mt_rand(1, (int) str_repeat('9', $this->parameters[1]));
     }
-
-
 
     /**
      * Determine if the validation rule passes.
@@ -34,8 +31,6 @@ class Decimal extends Rule
             $value
         ) > 0;
     }
-
-
 
     /**
      * Get the validation error message.

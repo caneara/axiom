@@ -8,14 +8,11 @@ use Illuminate\Support\Facades\DB;
 
 class MissingTest extends TestCase
 {
-
     /**
      * The user id.
      *
      **/
     protected int $user;
-
-
 
     /**
      * Define the application environment.
@@ -35,8 +32,6 @@ class MissingTest extends TestCase
         ]);
     }
 
-
-
     /**
      * Insert database records for testing purposes.
      *
@@ -51,8 +46,6 @@ class MissingTest extends TestCase
             'password' => bcrypt('password'),
         ]);
     }
-
-
 
     /** @test */
     public function the_does_not_exist_rule_can_be_validated()

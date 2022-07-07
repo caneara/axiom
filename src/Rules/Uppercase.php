@@ -6,7 +6,6 @@ use Axiom\Types\Rule;
 
 class Uppercase extends Rule
 {
-
     /**
      * Determine if the validation rule passes.
      *
@@ -15,8 +14,6 @@ class Uppercase extends Rule
     {
         return mb_strtoupper($value) === $value;
     }
-
-
 
     /**
      * Get the validation error message.

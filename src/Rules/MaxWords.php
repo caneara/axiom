@@ -6,7 +6,6 @@ use Axiom\Types\Rule;
 
 class MaxWords extends Rule
 {
-
     /**
      * Determine if the validation rule passes.
      *
@@ -15,8 +14,6 @@ class MaxWords extends Rule
     {
         return count(preg_split('~[^\p{L}\p{N}\']+~u', $value)) <= $this->parameters[0];
     }
-
-
 
     /**
      * Get the validation error message.

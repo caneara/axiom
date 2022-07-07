@@ -6,7 +6,6 @@ use Axiom\Types\Rule;
 
 class OddNumber extends Rule
 {
-
     /**
      * Determine if the validation rule passes.
      *
@@ -15,8 +14,6 @@ class OddNumber extends Rule
     {
         return intval($value) % 2 !== 0;
     }
-
-
 
     /**
      * Get the validation error message.

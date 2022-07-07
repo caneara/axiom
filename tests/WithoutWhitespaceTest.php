@@ -7,7 +7,6 @@ use Axiom\Rules\WithoutWhitespace;
 
 class WithoutWhitespaceTest extends TestCase
 {
-
     /** @test */
     public function the_without_whitespace_rule_can_be_validated()
     {

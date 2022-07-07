@@ -7,7 +7,6 @@ use Orchestra\Testbench\TestCase;
 
 class ISBNTest extends TestCase
 {
-
     /** @test */
     public function the_isbn_rule_can_be_validated()
     {

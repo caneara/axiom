@@ -7,7 +7,6 @@ use Orchestra\Testbench\TestCase;
 
 class StrongPasswordTest extends TestCase
 {
-
     /** @test */
     public function the_strong_password_rule_can_be_validated()
     {

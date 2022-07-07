@@ -9,14 +9,11 @@ use Illuminate\Support\Facades\Auth;
 
 class RecordOwnerTest extends TestCase
 {
-
     /**
      * The other user id.
      *
      **/
     protected int $other;
-
-
 
     /**
      * The owner user id.
@@ -24,15 +21,11 @@ class RecordOwnerTest extends TestCase
      **/
     protected int $owner;
 
-
-
     /**
      * The post id.
      *
      **/
     protected int $post;
-
-
 
     /**
      * Define the application environment.
@@ -51,8 +44,6 @@ class RecordOwnerTest extends TestCase
             'foreign_key_constraints' => true,
         ]);
     }
-
-
 
     /**
      * Insert database records for testing purposes.
@@ -79,8 +70,6 @@ class RecordOwnerTest extends TestCase
             'user_id' => $this->owner,
         ]);
     }
-
-
 
     /** @test */
     public function the_record_owner_rule_can_be_validated()

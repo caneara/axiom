@@ -8,7 +8,6 @@ use Axiom\Support\Iso6391Alpha3;
 
 class LanguageCode extends Rule
 {
-
     /**
      * Determine if the validation rule passes.
      *
@@ -19,8 +18,6 @@ class LanguageCode extends Rule
 
         return array_key_exists(strtoupper($value), $array);
     }
-
-
 
     /**
      * Get the validation error message.

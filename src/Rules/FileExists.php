@@ -7,7 +7,6 @@ use Illuminate\Support\Facades\Storage;
 
 class FileExists extends Rule
 {
-
     /**
      * Determine if the validation rule passes.
      *
@@ -23,8 +22,6 @@ class FileExists extends Rule
 
         return Storage::disk($this->parameters[0])->exists("$path/$file");
     }
-
-
 
     /**
      * Get the validation error message.

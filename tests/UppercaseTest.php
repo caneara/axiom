@@ -7,7 +7,6 @@ use Orchestra\Testbench\TestCase;
 
 class UppercaseTest extends TestCase
 {
-
     /** @test */
     public function the_uppercase_rule_can_be_validated()
     {

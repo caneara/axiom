@@ -7,7 +7,6 @@ use Orchestra\Testbench\TestCase;
 
 class LanguageCodeTest extends TestCase
 {
-
     /** @test */
     public function the_two_letter_language_code_rule_can_be_validated()
     {
@@ -17,8 +16,6 @@ class LanguageCodeTest extends TestCase
         $this->assertTrue(validator(['code' => 'KL'], $rule)->passes());
         $this->assertFalse(validator(['code' => 'xx'], $rule)->passes());
     }
-
-
 
     /** @test */
     public function the_three_letter_language_code_rule_can_be_validated()

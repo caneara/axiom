@@ -8,7 +8,6 @@ use Illuminate\Support\Str;
 
 class DisposableEmail extends Rule
 {
-
     /**
      * Determine if the validation rule passes.
      *
@@ -27,8 +26,6 @@ class DisposableEmail extends Rule
             return ($this->parameters[0] ?? false) ? false : true;
         }
     }
-
-
 
     /**
      * Get the validation error message.

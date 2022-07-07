@@ -7,7 +7,6 @@ use Orchestra\Testbench\TestCase;
 
 class EvenNumberTest extends TestCase
 {
-
     /** @test */
     public function the_even_number_rule_can_be_validated()
     {

@@ -6,7 +6,6 @@ use Axiom\Types\Rule;
 
 class Titlecase extends Rule
 {
-
     /**
      * Determine if the validation rule passes.
      *
@@ -15,8 +14,6 @@ class Titlecase extends Rule
     {
         return ucwords($value) === $value;
     }
-
-
 
     /**
      * Get the validation error message.

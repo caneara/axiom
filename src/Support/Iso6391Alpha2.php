@@ -4,7 +4,6 @@ namespace Axiom\Support;
 
 class Iso6391Alpha2
 {
-
     /**
      * Array of countries with their ISO 639-1 alpha-2 codes.
      *

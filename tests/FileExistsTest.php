@@ -7,7 +7,6 @@ use Orchestra\Testbench\TestCase;
 
 class FileExistsTest extends TestCase
 {
-
     /**
      * Define the application environment.
      *
@@ -19,8 +18,6 @@ class FileExistsTest extends TestCase
             'root'   => realpath(__DIR__ . '/..') . '/support/assets',
         ]);
     }
-
-
 
     /** @test */
     public function the_file_exists_rule_can_be_validated()
