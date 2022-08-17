@@ -40,7 +40,7 @@ Axiom includes several breaking changes from the original package, so you'll nee
 
 ## Promo
 
-I made [Lumeno](https://lumeno.dev) to help you centralize your IT résumé, project portfolio and blog content. It aids in building a following, allows you to discover other creatives, and gets you invited to relevant jobs that match your personal requirements, such as minimum salary, availability, location, commute distance, and much more... [sign up for free!](https://lumeno.dev)
+[Lumeno](https://lumeno.dev) centralizes your IT profile (résumé, project portfolio and written articles) so that employers can discover, and invite you to apply for jobs that match your personal requirements, such as tech skills, minimum salary, availability, location, commute distance, and much more... [sign up for free!](https://lumeno.dev)
 
 <!-- Screenshot -->
 <p align="center">
