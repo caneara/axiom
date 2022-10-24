@@ -38,17 +38,6 @@ Axiom includes several breaking changes from the original package, so you'll nee
 7. The `Equals` rule has been removed. Instead, you should use Laravel's native `in` rule with a single option.
 8. The `DoesNotExist` rule has been renamed to `Missing`.
 
-## Promo
-
-[Lumeno](https://lumeno.dev) centralizes your IT profile (résumé, project portfolio and written articles) so that employers can discover, and invite you to apply for jobs that match your personal requirements, such as tech skills, minimum salary, availability, location, commute distance, and much more... [sign up for free!](https://lumeno.dev)
-
-<!-- Screenshot -->
-<p align="center">
-    <a target="_blank" href="https://lumeno.dev">
-        <img src="resources/banner.png" alt="Lumeno" style="max-height: 170px">
-    </a>
-</p>
-
 ## Usage
 
 As per the Laravel [documentation](https://laravel.com/docs/master/validation#using-rule-objects), simply import the relevant validation class wherever you require it, and then include it within the rules for a particular field:
