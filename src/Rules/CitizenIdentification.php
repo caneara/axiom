@@ -20,7 +20,6 @@ class CitizenIdentification extends Rule
         $array = ($this->parameters[0] ?? 2) === 2 ? Iso3166Alpha2::$codes : Iso3166Alpha3::$codes;
 
         switch (mb_strtoupper($this->parameters[0] ?? 'USA')) {
-
             case 'US':
             case 'USA':
                 return $this->verifyUnitedStates($value);
@@ -43,7 +42,6 @@ class CitizenIdentification extends Rule
 
             default:
                 return false;
-
         }
     }
 
