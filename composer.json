@@ -1,5 +1,5 @@
 {
-    "name": "mattkingshott/axiom",
+    "name": "caneara/axiom",
     "description": "A package that provides a library of reusable Laravel validation rules.",
     "keywords": [
         "axiom",
@@ -10,7 +10,7 @@
     ],
     "type": "library",
     "license": "MIT",
-    "homepage": "https://github.com/mattkingshott/axiom",
+    "homepage": "https://github.com/caneara/axiom",
     "autoload": {
         "psr-4": {
             "Axiom\\": "src"
