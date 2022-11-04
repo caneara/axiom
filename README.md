@@ -2,8 +2,6 @@
 
 This package provides a library of reusable validation rules for your Laravel projects. Use them to augment the existing set provided by Laravel itself.
 
-Axiom is a re-release of the original `alphametric/laravel-validation-rules` package, which was also created by myself. This new version includes a rewrite to support PHP 7.4+ and also includes type hinting as well as some additional refactoring.
-
 ## Installation
 
 Pull in the package using composer
