@@ -1,16 +1,3 @@
-<!-- Screenshot -->
-<p align="center">
-    <img src="resources/example.png" alt="Code example">
-</p>
-
-<!-- Badges -->
-<p align="center">
-  <img src="resources/build.svg" alt="Build">
-  <img src="resources/coverage.svg" alt="Coverage">
-  <img src="resources/version.svg" alt="Version">
-  <img src="resources/license.svg" alt="License">
-</p>
-
 # Axiom
 
 This package provides a library of reusable validation rules for your Laravel projects. Use them to augment the existing set provided by Laravel itself.
@@ -22,7 +9,7 @@ Axiom is a re-release of the original `alphametric/laravel-validation-rules` pac
 Pull in the package using composer
 
 ```bash
-composer require mattkingshott/axiom
+composer require caneara/axiom
 ```
 
 ## Upgrading
@@ -93,10 +80,6 @@ The following validation rules are currently available:
 ## Contributing
 
 Thank you for considering a contribution to Axiom. You are welcome to submit a PR containing improvements, however if they are substantial in nature, please also be sure to include a test or tests.
-
-## Support the project
-
-If you'd like to support the development of Axiom, then please consider [sponsoring me](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=YBEHLHPF3GUVY&source=url). Thanks so much!
 
 ## License
 
